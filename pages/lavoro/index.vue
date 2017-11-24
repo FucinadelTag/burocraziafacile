@@ -1,6 +1,7 @@
 <template lang="html">
     <div>
         <h1 v-for="articolo in articoli"  class="red">{{articolo.uid}}</h1>
+        
     </div>
 
 </template>
