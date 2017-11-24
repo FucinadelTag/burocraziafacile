@@ -1,9 +1,19 @@
 <template lang="html">
-    <h1 class="red">Hello lavoro!</h1>
+    <div>
+        <h1 v-for="articolo in articoli"  class="red">{{articolo.uid}}</h1>
+    </div>
+
 </template>
 
 <script>
+
 export default {
+    middleware: 'getArticoliByCategoria',
+    data: function () {
+        return {
+            articoli: this.$store.getters['articoli/getArticoli']
+        }
+    }
 }
 </script>
 

@@ -5,7 +5,7 @@
   "author": "Lorenzo Caldara <lorenzo@dinoweb.net>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "PORT=3333 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -19,6 +19,8 @@
     "node-sass": "^4.7.2",
     "nuxt": "^1.0.0-rc11",
     "nuxt-sass-resources-loader": "^1.1.0",
+    "prismic-dom": "^2.0.6",
+    "prismic-javascript": "^1.4.1",
     "sass-loader": "^6.0.6"
   },
   "devDependencies": {

@@ -1,3 +1,6 @@
+import _ from 'lodash'
+
 export default function ({ store, route }) {
-  store.commit('SET_ACTIVE_MENU', route.name)
+    let firsLevel = _.split (route.path, "/", 2)[1];
+    store.commit('SET_ACTIVE_MENU', firsLevel)
 }

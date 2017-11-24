@@ -1,7 +1,4 @@
 module.exports = {
-  /*
-  ** Headers of the page
-  */
     head: {
         title: 'burocraziafacile',
         meta: [
@@ -13,9 +10,6 @@ module.exports = {
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
         ]
     },
-      /*
-      ** Customize the progress bar color
-      */
     loading: { color: '#3B8070' },
     modules: [
         '@nuxtjs/bulma',
@@ -34,10 +28,9 @@ module.exports = {
     router: {
         middleware: 'ActiveMenu'
     },
-
-      /*
-      ** Build configuration
-      */
+    env: {
+        baseUrl: process.env.BASE_URL || 'http://localhost:3030'
+    },
     build: {
         postcss: {
             plugins: {
