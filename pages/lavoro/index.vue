@@ -1,12 +1,12 @@
 <template lang="html">
     <div>
-        <h1 v-for="articolo in articoli"  class="red">{{articolo.uid}}</h1>
-        
+        <articoloList v-for="articolo in articoli" v-bind:articolo="articolo" :key="articolo.id"/>
     </div>
 
 </template>
 
 <script>
+import articoloList from '~/components/articoloList.vue'
 
 export default {
     middleware: 'getArticoliByCategoria',
@@ -14,6 +14,9 @@ export default {
         return {
             articoli: this.$store.getters['articoli/getArticoli']
         }
+    },
+    components: {
+        articoloList
     }
 }
 </script>
