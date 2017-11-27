@@ -1,1 +1,9 @@
-$grey: #3fd2b1;
+@import "~bulma/sass/utilities/_all";
+
+$family-serif: 'Open Sans', sans-serif;
+
+// Use the new serif family
+$family-primary: $family-serif;
+
+
+@import "~bulma";

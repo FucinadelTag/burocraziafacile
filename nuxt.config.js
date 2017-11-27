@@ -7,13 +7,13 @@ module.exports = {
             { hid: 'description', name: 'description', content: 'Nuxt.js project' }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700' }
         ]
     },
     loading: { color: '#3B8070' },
     modules: [
-        '@nuxtjs/bulma',
-        ['nuxt-sass-resources-loader', './assets/scss/main.scss']
+        ['nuxt-sass-resources-loader', './assets/scss/variables.scss']
     ],
     css: [
         {src: '~/assets/scss/main.scss', lang: 'scss'}
@@ -27,9 +27,6 @@ module.exports = {
     },
     router: {
         middleware: 'ActiveMenu'
-    },
-    env: {
-        baseUrl: process.env.BASE_URL || 'http://localhost:3030'
     },
     build: {
         postcss: {
