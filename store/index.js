@@ -59,5 +59,14 @@ export const getters = {
         _.set (finded, 'isActive', 'active');
 
         return menu_dataOk;
+    },
+    getCurrentCategoria: state => {
+
+        let menu_dataOk = state.categorie;
+
+        let finded = _.find(menu_dataOk, ['link', state.activeMenu]);
+
+        return finded
+
     }
 }
