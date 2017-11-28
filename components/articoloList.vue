@@ -3,6 +3,7 @@
         <div class="columns">
             <div class="column">
                 <h2 class="title"><span v-html="PrismicDom.RichText.asHtml(articolo.data.titolo)"></span></h2>
+                <span>{{dataArticolo}}</span>
             </div>
         </div>
         <div class="columns">
@@ -20,9 +21,17 @@
 
 <script>
 import PrismicDom from 'prismic-dom'
+import Moment from 'moment'
 
 export default {
     props: ['articolo'],
+    computed: {
+        // a computed getter
+        dataArticolo: function () {
+          // `this` points to the vm instance
+          return Moment(this.articolo.last_publication_date).format('DD/MM/YYYY');
+        }
+    },
     data: function () {
         return {
             PrismicDom: PrismicDom
