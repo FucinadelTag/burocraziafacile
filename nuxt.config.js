@@ -26,7 +26,7 @@ module.exports = {
         }
     },
     router: {
-        middleware: 'ActiveMenu'
+        middleware: ['ActiveMenu', 'getSettings']
     },
     build: {
         postcss: {

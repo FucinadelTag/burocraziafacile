@@ -1,14 +1,15 @@
 import Prismic from 'prismic-javascript'
+import fdtPrismic from '~/tools/prismic.js'
 
-const apiEndpoint = 'http://burocraziafacile.prismic.io/api/v2';
+//const apiEndpoint = 'http://burocraziafacile.prismic.io/api/v2';
 
-const getApi = async function () {
-    let api = await Prismic.getApi(apiEndpoint)
-    return api;
-}
+// const getApi = async function (store) {
+//     let api = await Prismic.getApi(store.prismicApiEndpoint)
+//     return api;
+// }
 
 const getCategoriaBySlug = async function (slug) {
-    let api = await getApi();
+    let api = await fdtPrismic();
 
     try {
         const categoria = await api.getByUID('categoria', slug);
@@ -19,7 +20,7 @@ const getCategoriaBySlug = async function (slug) {
 }
 
 const getPrismicDataByCategoriaId = async function (store, error) {
-    let api = await getApi();
+    let api = await fdtPrismic(store);
     let categoria = await getCategoriaBySlug(store.state.activeMenu);
 
     try {
@@ -39,7 +40,7 @@ const getPrismicDataByCategoriaId = async function (store, error) {
 export default async function ({ store, route, error }) {
     let data  = await getPrismicDataByCategoriaId (store, error);
     if (typeof data != 'undefined'){
-        console.log (data);
+        //console.log (data);
         store.commit('articoli/SET_LIST', data.results)
     }
 

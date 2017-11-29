@@ -1,10 +1,16 @@
 <template>
     <div class="container">
-        <div class="columns">
-            <div class="column">
-                <MyMenu :isActive="isActive"/>
+            <div>
+                <MyMenu/>
+                <div class="columns padding">
+                    <div class="column is-two-thirds">
+                        <nuxt/>
+                    </div>
+                    <div class="column">
+                        Destra
+                    </div>
+                </div>
 
-                <nuxt/>
 
                 <!-- <div class="columns ">
                     <div class="column is-three-quarters">
@@ -18,9 +24,6 @@
 
         </div>
 
-    </div>
-
-
 </template>
 
 <script charset="utf-8">
@@ -32,11 +35,25 @@
         },
         data (context) {
             //console.log(context);
-            return { isActive: 'palla' }
+            return {
+                title: this.$store.getters.getTitle,
+                description: this.$store.getters.getDescription
+            }
+        },
+        head () {
+            return {
+                title: this.title,
+                meta: [
+                    { hid: 'description', name: 'description', content: this.description }
+                ]
         }
+  }
     }
 </script>
 
 <style lang="scss">
-
+    .padding {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 </style>

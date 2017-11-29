@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import PrismicDom from 'prismic-dom'
 
 
 const getCategorie = function (){
@@ -40,13 +41,17 @@ const getCategorie = function (){
 export const state = () => ({
   activeMenu: false,
   categorie: getCategorie(),
+  settings: false
 
 })
 
 export const mutations = {
-  SET_ACTIVE_MENU (state, active_menu) {
-    state.activeMenu = active_menu || false
-  }
+    SET_ACTIVE_MENU (state, active_menu) {
+        state.activeMenu = active_menu || false
+    },
+    SET_SETTINGS (state, settings) {
+      state.settings = settings || false
+    }
 }
 
 export const getters = {
@@ -68,5 +73,29 @@ export const getters = {
 
         return finded
 
-    }
+    },
+    getLogoUrl: state => {
+
+        let settings = state.settings;
+
+        let logoUrl = settings.data.logo.url
+
+        return logoUrl;
+    },
+    getTitle: state => {
+
+        let settings = state.settings;
+
+        let title = PrismicDom.RichText.asText(settings.data.title)
+
+        return title;
+    },
+    getDescription: state => {
+
+        let settings = state.settings;
+
+        let description = PrismicDom.RichText.asText(settings.data.description)
+
+        return description;
+    },
 }

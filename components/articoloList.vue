@@ -4,7 +4,7 @@
             <div class="columns">
                 <div class="column">
                     <h2 class="title" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h2>
-                    <span class="data">{{dataArticolo}} | Autore: Redazione</span>
+                    <dataArticolo v-bind:articolo="articolo"/>
                 </div>
             </div>
             <div class="columns">
@@ -22,17 +22,13 @@
 </template>
 
 <script>
+import dataArticolo from '~/components/dataArticolo.vue'
 import PrismicDom from 'prismic-dom'
-import Moment from 'moment'
 
 export default {
     props: ['articolo'],
     computed: {
         // a computed getter
-        dataArticolo: function () {
-            // `this` points to the vm instance
-            return Moment(this.articolo.last_publication_date).format('DD MMMM YYYY');
-        },
         linkArticolo: function () {
             let categoria = this.articolo.data.categoria.uid;
 
@@ -43,6 +39,9 @@ export default {
         return {
             PrismicDom: PrismicDom
         }
+    },
+    components: {
+        dataArticolo
     }
 }
 </script>
@@ -56,12 +55,6 @@ export default {
         padding-bottom: 15px;
         border-bottom: 1px solid;
         border-bottom-color: $grey-ligh;
-
-        .data {
-            font-size: 85%;
-            font-style: italic;
-            margin-top: -20px;
-        }
     }
 
     p.small {

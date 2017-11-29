@@ -1,15 +1,10 @@
 <template lang="html">
-    <div class="columns">
-        <div class="column is-two-thirds">
-            <h1 class="title space">{{currentCategoria.name}}</h1>
-            <div class="listIntro">
-                    Ultimi articoli
-            </div>
-            <articoloList v-for="articolo in articoli" v-bind:articolo="articolo" :key="articolo.id"/>
+    <div>
+        <h1 class="title space">{{currentCategoria.name}}</h1>
+        <div class="listIntro">
+                Ultimi articoli
         </div>
-        <div class="column">
-
-        </div>
+        <articoloList v-for="articolo in articoli" v-bind:articolo="articolo" :key="articolo.id"/>
     </div>
 
 </template>
@@ -28,6 +23,7 @@ export default {
     components: {
         articoloList
     }
+
 }
 </script>
 
