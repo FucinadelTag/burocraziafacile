@@ -1,16 +1,17 @@
 <template lang="html">
     <article class="content">
         <header>
-            <h1 class="title is-3" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
+            <h1 class="title is-2" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
             <dataArticolo v-bind:articolo="articolo"/>
         </header>
         <img v-bind:src="articolo.data.immagine_principale.url" />
-        <section class="abstract" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
+        <section class="abstract section" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
 
-            <section v-for="slice in articolo.data.body" :key="articolo.id">
-                <h2 class="title is-5" v-if="slice.primary.titolo[0].text !== ''" v-html="PrismicDom.RichText.asText(slice.primary.titolo)"/>
+            <section class="section" v-for="slice in articolo.data.body" :key="articolo.id">
 
-                <div v-if="slice.primary.titolo[0].testo !== ''" v-html="PrismicDom.RichText.asHtml(slice.primary.testo)"/>
+                <paragrafoArticolo v-if="slice.slice_type == 'paragrafo'"  v-bind:paragrafo="slice"/>
+
+                <callToActionArticolo v-if="slice.slice_type == 'call_to_action'"  v-bind:paragrafo="slice"/>
 
             </section>
 
@@ -21,6 +22,8 @@
 <script>
 import PrismicDom from 'prismic-dom'
 import dataArticolo from '~/components/dataArticolo.vue'
+import paragrafoArticolo from '~/components/paragrafoArticolo.vue'
+import callToActionArticolo from '~/components/callToActionArticolo.vue'
 
 export default {
     middleware: 'getArticolo',
@@ -32,14 +35,28 @@ export default {
 
     },
     components: {
-        dataArticolo
+        dataArticolo,
+        paragrafoArticolo,
+        callToActionArticolo,
     }
 }
 </script>
 
 <style lang="scss">
-.data {
-    font-size: 90%;
+.section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+
+	.section {
+        padding-left: 0rem;
+        padding-right: 0rem;
+	}
+
 }
 
 .abstract {

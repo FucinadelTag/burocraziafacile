@@ -39,5 +39,6 @@ export default {
         padding: 3px;
         margin-bottom: 20px;
         text-transform: uppercase;
+        font-size: 90%;
     }
 </style>

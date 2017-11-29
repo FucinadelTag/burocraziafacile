@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-            <div>
+            <div class="content">
                 <MyMenu/>
                 <div class="columns padding">
                     <div class="column is-two-thirds">
