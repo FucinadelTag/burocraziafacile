@@ -38,6 +38,14 @@ export default {
         dataArticolo,
         paragrafoArticolo,
         callToActionArticolo,
+    },
+    head () {
+        return {
+            title:  this.articolo.data.meta_title != null ? this.articolo.data.meta_title : this.$store.getters.getTitle,
+            meta: [
+                { hid: 'description', name: 'description', content: this.articolo.data.meta_description != null ? this.articolo.data.meta_description : this.$store.getters.getDescription }
+            ]
+        }
     }
 }
 </script>
