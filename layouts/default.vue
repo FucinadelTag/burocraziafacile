@@ -3,7 +3,7 @@
             <div class="content">
                 <MyMenu/>
                 <div class="columns padding">
-                    <div class="column is-two-thirds">
+                    <div class="column is-two-thirds default">
                         <nuxt/>
                     </div>
                     <div class="column">
@@ -55,5 +55,10 @@
     .padding {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .default {
+        border-right: 1px solid;
+        border-right-color: $grey-ligh;
     }
 </style>

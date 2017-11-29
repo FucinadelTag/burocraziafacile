@@ -1,9 +1,9 @@
 <template lang="html">
-    <div class="articoloList">
+    <article class="articoloList">
         <a v-bind:href="linkArticolo">
             <div class="columns">
                 <div class="column">
-                    <h2 class="title" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h2>
+                    <h2 class="title is-2" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h2>
                     <dataArticolo v-bind:articolo="articolo"/>
                 </div>
             </div>
@@ -15,7 +15,7 @@
             </div>
         </a>
 
-    </div>
+    </article>
 
 
 
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss">
-    a {
+    .articoloList a {
         color: inherit;
     }
     .articoloList {

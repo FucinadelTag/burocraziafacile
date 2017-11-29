@@ -11,12 +11,18 @@ import PrismicDom from 'prismic-dom'
 
 export default {
     props: ['callToAction'],
+    data: function () {
+        return {
+            articolo: this.$store.getters['articoli/getArticolo']
+        }
+    },
     computed: {
         // a computed getter
         getLinkWithTag: function () {
             let linkUrl = PrismicDom.Link.url(this.callToAction.link);
+            let uid = this.articolo.uid;
 
-            let taggedLink = linkUrl + '/?utm_source=burocraziafacile&utm_medium=articolo';
+            let taggedLink = linkUrl + '/?utm_source=burocraziafacile&utm_medium=articolo&utm_campaign=' + uid;
 
             return taggedLink;
         }

@@ -1,6 +1,6 @@
 <template lang="html">
-    <div class="box">
-        <h3 class="subtitle is-4" v-if="paragrafo.primary.titolo[0].text !== ''" v-html="PrismicDom.RichText.asText(paragrafo.primary.titolo)"/>
+    <div class="box callToAction">
+        <h3 class="subtitle is-3" v-if="paragrafo.primary.titolo[0].text !== ''" v-html="PrismicDom.RichText.asText(paragrafo.primary.titolo)"/>
         <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.descrizione)"/>
         <hr>
         <div v-for="action in paragrafo.items" v-bind:action="action" :key="paragrafo.id">
@@ -8,7 +8,7 @@
                 <div class="column">
                     <buttonCallToAction  v-bind:callToAction="action"/>
                 </div>
-                
+
             </div>
             <div class="columns is-multiline is-centered">
                 <div class="column">
@@ -47,8 +47,8 @@ export default {
 </script>
 
 <style lang="scss">
-.box {
-    background-color: #f2f2f1;
+.callToAction {
+    background-color: #ffffff;
 }
 .button {
     background-color: #ea6728;
