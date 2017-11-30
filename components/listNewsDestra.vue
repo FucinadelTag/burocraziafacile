@@ -37,9 +37,9 @@ export default {
         margin-bottom: 0.5rem;
     }
     .titolo {
-        background-color: $orangePratiche;
-        border: 1px solid;
-        color: #ffffff;
+        background-color: $grey-ligh;
+        color: $grey;
+        font-weight: 800;
         padding: 0.5rem;
         margin-bottom: 0.3rem;
     }

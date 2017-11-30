@@ -12,7 +12,7 @@
                         <div class="columns">
                             <div class="column is-one-third">
                                 <p v-html="PrismicDom.RichText.asText(firstArticle.data.abstract)"/>
-                                <dataArticolo v-bind:articolo="firstArticle"/>
+                                <!-- <dataArticolo v-bind:articolo="firstArticle"/> -->
                             </div>
                             <div class="column">
                                 <figure class="image">
@@ -36,7 +36,7 @@
                                     <figure class="">
                                         <img v-bind:src="articolo.data.immagine_principale[0].immagine.url" v-bind:alt="articolo.data.immagine_principale[0].alt" v-bind:title="articolo.data.immagine_principale[0].title" />
                                     </figure>
-                                    <dataArticolo v-bind:articolo="articolo"/>
+                                    <!-- <dataArticolo v-bind:articolo="articolo"/> -->
                                 </div>
                             </div>
                             <div class="columns">
