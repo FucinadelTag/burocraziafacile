@@ -31,8 +31,6 @@ export default {
         padding-top: 10px;
     }
     .listIntro {
-        border-bottom: 1px solid;
-        border-bottom-color: $grey-ligh;
         margin-bottom: 20px;
         text-transform: uppercase;
         font-size: 90%;

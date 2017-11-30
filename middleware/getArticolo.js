@@ -20,7 +20,6 @@ export default async function ({ store, route, error }) {
 
     let data  = await getArticolo (uid);
     if (typeof data != 'undefined'){
-        console.log (data);
         store.commit('articoli/SET_ARTICOLO', data)
     }
 

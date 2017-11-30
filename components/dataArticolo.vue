@@ -1,6 +1,9 @@
 <template lang="html">
-    <div>
-        Scritto da: <span class="data">Redazione</span> il <span class="data"><time>{{dataArticolo}}</time></span>
+    <div class="dataArticolo">
+        <span class="data"><time>{{dataArticolo}}</time></span> |
+        <span class="tag">
+            {{articolo.data.categoria.uid}}
+        </span>
     </div>
 </template>
 
@@ -18,9 +21,18 @@ export default {
 }
 </script>
 
-<style lang="css">
-.data {
-    font-size: 90%;
-    font-style: italic;
+<style lang="scss">
+
+.dataArticolo {
+        font-size: 90%;
+        margin-bottom: 0rem;
+    .data {
+
+        font-style: italic;
+    }
+    .tag {
+
+        margin-left: 0rem;
+    }
 }
 </style>

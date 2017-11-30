@@ -23,7 +23,6 @@ const getArticoliHome = async function (store, error) {
 export default async function ({ store, route, error }) {
     let data  = await getArticoliHome (store, error);
     if (typeof data != 'undefined'){
-        console.log (data);
         store.commit('articoli/SET_LIST_HOME', data.results)
     }
 

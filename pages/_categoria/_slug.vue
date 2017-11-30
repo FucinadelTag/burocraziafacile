@@ -1,7 +1,7 @@
 <template lang="html">
     <article class="content slug">
-        <header>
-            <h1 class="title is-2" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
+        <header class="testata">
+            <h1 class="title is-4" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
             <dataArticolo v-bind:articolo="articolo"/>
         </header>
         <img v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" v-bind:title="immagine_principale.title" />
@@ -81,6 +81,10 @@ export default {
 
     .abstract {
         font-style: italic;
+    }
+
+    .testata {
+        margin-bottom: 1rem;
     }
 
 }

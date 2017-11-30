@@ -47,13 +47,18 @@ export default {
 </script>
 
 <style lang="scss">
-    .articoloList a {
-        color: inherit;
-    }
     .articoloList {
-        padding-top: 15px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid;
-        border-bottom-color: $grey-ligh;
+        a {
+            color: inherit;
+        }
+        padding: 2rem;
+        border-top-color: $orangePratiche;
+        border-top-width: .1rem;
+        border-top-style: solid;
+        margin-bottom: 2rem;
+        // padding-top: 15px;
+        // padding-bottom: 15px;
+        // border-bottom: 1px solid;
+        // border-bottom-color: $grey-ligh;
     }
 </style>
