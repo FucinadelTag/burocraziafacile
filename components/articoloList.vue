@@ -56,8 +56,4 @@ export default {
         border-bottom: 1px solid;
         border-bottom-color: $grey-ligh;
     }
-
-    p.small {
-        font-size: 100%;
-    }
 </style>

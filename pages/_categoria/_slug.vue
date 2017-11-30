@@ -1,5 +1,5 @@
 <template lang="html">
-    <article class="content">
+    <article class="content slug">
         <header>
             <h1 class="title is-2" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
             <dataArticolo v-bind:articolo="articolo"/>
@@ -62,24 +62,28 @@ export default {
 </script>
 
 <style lang="scss">
-.section {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+.slug {
+    .section {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+
+    	.section {
+            padding-left: 0rem;
+            padding-right: 0rem;
+    	}
+
+    }
+
+    .abstract {
+        font-style: italic;
+    }
+
 }
 
-@media screen and (max-width: 768px) {
-
-	.section {
-        padding-left: 0rem;
-        padding-right: 0rem;
-	}
-
-}
-
-.abstract {
-    font-style: italic;
-}
 
 </style>

@@ -1,37 +1,40 @@
 <template>
-    <div class="container">
+    <div class="default">
+        <div class="container">
             <div class="content">
                 <MyMenu/>
                 <div class="columns padding">
-                    <div class="column is-two-thirds default">
+                    <div class="column is-two-thirds">
                         <nuxt/>
                     </div>
                     <div class="column">
-                        Destra
+                        <listNewsDestra/>
                     </div>
                 </div>
-
-
-                <!-- <div class="columns ">
-                    <div class="column is-three-quarters">
-                        Second column
-                    </div>
-                    <div class="column">
-                        Third column
-                    </div>
-                </div> -->
             </div>
-
         </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                 <p>
+                    <strong>Burocraziafacile</strong> è un progetto di <i>Fucina del Tag</i>. | Via Ampère 61/A - P.Iva 03201900960
+                 </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
 
 </template>
 
 <script charset="utf-8">
     import MyMenu from '~/components/MyMenu.vue'
+    import listNewsDestra from '~/components/listNewsDestra.vue'
+
 
     export default {
         components: {
-            MyMenu
+            MyMenu, listNewsDestra
         },
         data (context) {
             //console.log(context);
@@ -58,7 +61,11 @@
     }
 
     .default {
-        border-right: 1px solid;
-        border-right-color: $grey-ligh;
+        .footer {
+            margin-top: 5rem;
+            padding-bottom: 3rem;
+        }
+        //border-right: 1px solid;
+        //border-right-color: $grey-ligh;
     }
 </style>

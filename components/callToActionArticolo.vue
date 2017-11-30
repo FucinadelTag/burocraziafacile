@@ -5,13 +5,13 @@
         <hr>
         <div v-for="action in paragrafo.items" v-bind:action="action" :key="paragrafo.id">
             <div class="columns is-multiline">
-                <div class="column">
+                <div class="column has-text-centered">
                     <buttonCallToAction  v-bind:callToAction="action"/>
                 </div>
 
             </div>
             <div class="columns is-multiline is-centered">
-                <div class="column">
+                <div class="column has-text-centered">
                     <span v-html="PrismicDom.RichText.asHtml(action.descrizione)"/>
                 </div>
             </div>
