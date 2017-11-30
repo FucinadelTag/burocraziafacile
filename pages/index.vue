@@ -5,7 +5,7 @@
                     <article class="box tile is-child">
                         <div class="columns">
                             <div class="colum">
-                                <h1 class="title is-4" v-html="PrismicDom.RichText.asText(firstArticle.data.titolo)"/>
+                                <h1 class="title is-2" v-html="PrismicDom.RichText.asText(firstArticle.data.titolo)"/>
                             </div>
                         </div>
                         <hr>
