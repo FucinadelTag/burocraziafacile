@@ -33,6 +33,7 @@ const getPrismicDataByCategoriaId = async function (store, error) {
         );
         return data
     } catch (e) {
+        console.log(e);
         error({ message: 'Data not found', statusCode: 404 })
     }
 }

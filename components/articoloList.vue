@@ -9,7 +9,7 @@
             </div>
             <div class="columns">
                 <div class="column is-two-quarters">
-                    <img v-bind:src="articolo.data.immagine_principale.url" />
+                    <img v-bind:src="articolo.data.immagine_principale[0].immagine.url" v-bind:title="articolo.data.immagine_principale[0].alt" v-bind:alt="articolo.data.immagine_principale[0].alt" />
                 </div>
                 <div class="column is-two-quarters" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
             </div>

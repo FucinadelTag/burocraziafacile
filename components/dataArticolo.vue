@@ -1,5 +1,7 @@
 <template lang="html">
-    <span class="data"><time>{{dataArticolo}}</time></span>
+    <div>
+        Scritto da: <span class="data">Redazione</span> il <span class="data"><time>{{dataArticolo}}</time></span>
+    </div>
 </template>
 
 <script>

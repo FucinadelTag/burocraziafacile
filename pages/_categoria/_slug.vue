@@ -4,7 +4,7 @@
             <h1 class="title is-2" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
             <dataArticolo v-bind:articolo="articolo"/>
         </header>
-        <img v-bind:src="articolo.data.immagine_principale.url" />
+        <img v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" v-bind:title="immagine_principale.title" />
         <section class="abstract section" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
 
             <section class="section" v-for="slice in articolo.data.body" :key="articolo.id">
@@ -34,6 +34,17 @@ export default {
         }
 
     },
+    computed: {
+        // a computed getter
+        immagine_principale: function () {
+            let immagineData = {
+                url: this.articolo.data.immagine_principale[0].immagine.url,
+                alt: this.articolo.data.immagine_principale[0].alt,
+                title: this.articolo.data.immagine_principale[0].alt,
+            }
+            return immagineData;
+        }
+    },
     components: {
         dataArticolo,
         paragrafoArticolo,
@@ -54,8 +65,8 @@ export default {
 .section {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 @media screen and (max-width: 768px) {

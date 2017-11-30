@@ -1,5 +1,5 @@
 <template lang="html">
-    <div>
+    <div class="paragrafoArticolo">
         <h2 class="subtitle is-3" v-if="paragrafo.primary.titolo[0].text !== ''" v-html="PrismicDom.RichText.asText(paragrafo.primary.titolo)"/>
 
 
@@ -9,7 +9,7 @@
                     <div v-if="paragrafo.primary.testo[0].text !== ''" v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
                 </div>
                 <div class="column">
-                    <img v-bind:src="paragrafo.primary.immagine.Quadrata.url" />
+                    <img v-bind:src="paragrafo.primary.immagine.Quadrata.url" v-bind:alt="paragrafo.primary.alt_immagine" />
                 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@
         <div v-if="paragrafo.primary.posizione_immagine == 'Sinistra'">
             <div class="columns">
                 <div class="column">
-                    <img v-bind:src="paragrafo.primary.immagine.Quadrata.url" />
+                    <img v-bind:src="paragrafo.primary.immagine.Quadrata.url" v-bind:alt="paragrafo.primary.alt_immagine" />
                 </div>
                 <div class="column">
                     <div v-if="paragrafo.primary.testo[0].text !== ''" v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
@@ -26,7 +26,7 @@
         </div>
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Sopra'">
-            <img v-bind:src="paragrafo.primary.immagine.url" />
+            <img v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
             <div v-if="paragrafo.primary.testo[0].text !== ''" v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
         </div>
 
@@ -37,7 +37,7 @@
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Sotto'">
             <div v-if="paragrafo.primary.testo[0].text !== ''" v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
-            <img v-bind:src="paragrafo.primary.immagine.url" />
+            <img v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
         </div>
 
     </div>
@@ -58,4 +58,15 @@ export default {
 </script>
 
 <style lang="scss">
+
+.paragrafoArticolo {
+    img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        //padding: 0.4rem;
+        //border: 1px solid;
+        //border-color: $grey-ligh;
+    }
+}
+
 </style>
