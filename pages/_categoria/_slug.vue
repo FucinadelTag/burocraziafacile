@@ -64,8 +64,8 @@ export default {
 <style lang="scss">
 .slug {
     .section {
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding-left: 7rem;
+        padding-right: 7rem;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
     }
@@ -75,6 +75,15 @@ export default {
     	.section {
             padding-left: 0rem;
             padding-right: 0rem;
+    	}
+
+    }
+
+    @media screen and (max-width: 1300px) {
+
+    	.section {
+            padding-left: 3rem;
+            padding-right: 3rem;
     	}
 
     }

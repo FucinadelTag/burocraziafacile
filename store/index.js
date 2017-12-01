@@ -14,26 +14,26 @@ const getCategorie = function (){
             link: 'impresa',
             isActive: ''
         },
-        {
-            name: 'Fisco',
-            link: 'fisco',
-            isActive: ''
-        },
-        {
-            name: 'Auto',
-            link: 'auto',
-            isActive: ''
-        },
-        {
-            name: 'Famiglia',
-            link: 'famiglia',
-            isActive: ''
-        },
-        {
-            name: 'Casa',
-            link: 'casa',
-            isActive: ''
-        },
+        // {
+        //     name: 'Fisco',
+        //     link: 'fisco',
+        //     isActive: ''
+        // },
+        // {
+        //     name: 'Auto',
+        //     link: 'auto',
+        //     isActive: ''
+        // },
+        // {
+        //     name: 'Famiglia',
+        //     link: 'famiglia',
+        //     isActive: ''
+        // },
+        // {
+        //     name: 'Casa',
+        //     link: 'casa',
+        //     isActive: ''
+        // },
     ]
 }
 
