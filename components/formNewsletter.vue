@@ -1,15 +1,17 @@
 <template lang="html">
     <section class="box formNewsletter">
-        <p class="title is-4 is-centered">Rimani sempre aggiornato</p>
-        <p class="subtitle is-6 is-centered">Ricevi le nostre notizie una volta al mese</p>
-        <div class="field">
-            <p class="control">
-                <input class="input" type="email" placeholder="Email">
-            </p>
-        </div>
-        <div class="control has-text-centered">
-            <button class="button">Iscriviti adesso</button>
-        </div>
+        <p class="title is-4">Rimani sempre aggiornato</p>
+        <p class="subtitle is-6">Ricevi le nostre notizie una volta al mese</p>
+        <form accept-charset="UTF-8" action="https://formkeep.com/f/432b92859283" method="POST">
+            <div class="field">
+                <p class="control">
+                    <input class="input" type="email" name="email" placeholder="Email">
+                </p>
+            </div>
+            <div class="control has-text-centered">
+                <button class="button">Iscriviti adesso</button>
+            </div>
+        </form>
         <p class="spiegazione">
             Una volta al mese ti invieremo un'email con le ultime novità e istruzioni per <strong>muoverti con facilità</strong> nel mondo della burocrazia in italia.
         </p>
