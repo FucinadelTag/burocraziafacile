@@ -49,20 +49,22 @@ export default {
 <style lang="scss">
 .callToAction {
     background-color: #ffffff;
-}
-.button {
-    background-color: #ea6728;
-    color: #ffffff;
-    text-transform: uppercase;
 
-    &:hover {
+    .button {
+        background-color: #ea6728;
         color: #ffffff;
-        background-color: #f87a13;
-    }
+        text-transform: uppercase;
 
-    &:visited {
-        color: #ffffff;
-        background-color: #f87a13;
+        &:hover {
+            color: #ffffff;
+            background-color: #f87a13;
+        }
+
+        &:visited {
+            color: #ffffff;
+            background-color: #f87a13;
+        }
     }
 }
+
 </style>
