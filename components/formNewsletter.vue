@@ -5,7 +5,7 @@
         <form accept-charset="UTF-8" action="https://formkeep.com/f/432b92859283" method="POST">
             <div class="field">
                 <p class="control">
-                    <input class="input" type="email" name="email" placeholder="Email">
+                    <input required class="input" type="email" name="email" placeholder="Email">
                 </p>
             </div>
             <div class="control has-text-centered">
