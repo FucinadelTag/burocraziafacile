@@ -25,6 +25,9 @@ module.exports = {
             }
         }
     },
+    serverMiddleware: [
+        'redirect-ssl'
+    ],
     router: {
         middleware: ['ActiveMenu', 'getSettings', 'getNews']
     },
