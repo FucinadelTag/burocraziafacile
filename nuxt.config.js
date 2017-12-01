@@ -19,7 +19,7 @@ module.exports = {
             '@nuxtjs/google-analytics',
         ]
     ],
-    'google-analytics': {
+    google-analytics: {
         id: 'UA-19846103-41'
     }
     css: [
