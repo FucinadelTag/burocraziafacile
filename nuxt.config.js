@@ -21,7 +21,7 @@ module.exports = {
     ],
     google-analytics: {
         id: 'UA-19846103-41'
-    }
+    },
     css: [
         {src: '~/assets/scss/main.scss', lang: 'scss'}
     ],
