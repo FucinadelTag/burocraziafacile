@@ -14,8 +14,35 @@
                 <callToActionArticolo v-if="slice.slice_type == 'call_to_action'"  v-bind:paragrafo="slice"/>
 
             </section>
+            <hr>
+            <section class="comments">
+                <vue-disqus shortname="https-www-burocraziafacile-it" :identifier="articolo.uid" :url="articoloAbsoluteUrl"></vue-disqus>
+            </section>
+
+            <!-- <hr>
+            <section id="disqus_thread"></section>
+            <script>
+
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                var disqus_config = function () {
+                    this.page.url = articoloAbsoluteUrl;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = articolo.uid; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://https-www-burocraziafacile-it.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
 
     </article>
+
+
+
 
 </template>
 
@@ -24,6 +51,8 @@ import PrismicDom from 'prismic-dom'
 import dataArticolo from '~/components/dataArticolo.vue'
 import paragrafoArticolo from '~/components/paragrafoArticolo.vue'
 import callToActionArticolo from '~/components/callToActionArticolo.vue'
+
+import VueDisqus from 'vue-disqus/VueDisqus.vue'
 
 export default {
     middleware: 'getArticolo',
@@ -43,12 +72,17 @@ export default {
                 title: this.articolo.data.immagine_principale[0].alt,
             }
             return immagineData;
+        },
+        articoloAbsoluteUrl: function () {
+
+            return 'https://www.burocraziafacile.it/' + this.articolo.data.categoria.uid + '/' + this.articolo.uid;
         }
     },
     components: {
         dataArticolo,
         paragrafoArticolo,
         callToActionArticolo,
+        VueDisqus,
     },
     head () {
         return {
@@ -79,14 +113,6 @@ export default {
 
     }
 
-    @media screen and (max-width: 1300px) {
-
-    	.section {
-            padding-left: 3rem;
-            padding-right: 3rem;
-    	}
-
-    }
 
     .abstract {
         font-style: italic;

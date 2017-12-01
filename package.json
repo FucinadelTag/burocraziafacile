@@ -22,7 +22,8 @@
     "prismic-dom": "^2.0.6",
     "prismic-javascript": "^1.4.1",
     "redirect-ssl": "^1.2.1",
-    "sass-loader": "^6.0.6"
+    "sass-loader": "^6.0.6",
+    "vue-disqus": "^2.0.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

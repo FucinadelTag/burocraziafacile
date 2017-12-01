@@ -4,8 +4,10 @@
             <div class="titolo">Novità</div>
             <article class="" v-for="articolo in articoli" v-bind:articolo="articolo">
                 <a v-bind:href="'/' + articolo.data.categoria.uid + '/' + articolo.uid">
-                    <div class="title is-6" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"/>
-                    <p v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
+                    <div>
+                        <div class="title is-6" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"/>
+                        <p v-html="PrismicDom.RichText.asText(articolo.data.abstract)" />
+                    </div>
                 </a>
                 <hr>
             </article>
