@@ -19,10 +19,10 @@ export default {
 
 <style lang="scss">
 .grazieNewsletter {
-    padding: 3rem;
+    padding: 4rem;
 
     a {
-        font-size: 250%;
+        font-size: 220%;
     }
 }
 </style>
