@@ -1,5 +1,5 @@
 <template lang="html">
-    <div>
+    <div class="callToAction">
         <a class="button is-hidden-tablet" v-bind:href="getLinkWithTag" target="_blank"  v-html="callToAction.testo_mobile"></a>
         <a class="button is-hidden-mobile" v-bind:href="getLinkWithTag" target="_blank"  v-html="callToAction.testo_bottone"></a>
     </div>
@@ -31,19 +31,25 @@ export default {
 </script>
 
 <style lang="scss">
-.button {
-    background-color: #ea6728;
-    color: #ffffff;
-    text-transform: uppercase;
 
-    &:hover {
+.callToAction {
+    .button {
+        background-color: #ea6728;
         color: #ffffff;
-        background-color: #f87a13;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #ffffff;
+            background-color: #f87a13;
+        }
+
+        &:visited {
+            color: #ffffff;
+            background-color: #f87a13;
+        }
     }
 
-    &:visited {
-        color: #ffffff;
-        background-color: #f87a13;
-    }
 }
+
+
 </style>

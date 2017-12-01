@@ -8,7 +8,9 @@
                         <nuxt/>
                     </div>
                     <div class="column">
+                        <formNewsletter/>
                         <listNewsDestra/>
+
                     </div>
                 </div>
             </div>
@@ -30,11 +32,14 @@
 <script charset="utf-8">
     import MyMenu from '~/components/MyMenu.vue'
     import listNewsDestra from '~/components/listNewsDestra.vue'
+    import formNewsletter from '~/components/formNewsletter.vue'
 
 
     export default {
         components: {
-            MyMenu, listNewsDestra
+            MyMenu,
+            listNewsDestra,
+            formNewsletter
         },
         data (context) {
             //console.log(context);
