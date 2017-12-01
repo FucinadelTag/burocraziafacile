@@ -24,7 +24,7 @@ export default {
 <style lang="scss">
 .formNewsletter {
     padding: 2rem;
-    border-top-color: $orangePratiche;
+    border-top-color: $bluePratiche;
     border-top-width: .1rem;
     border-top-style: solid;
     margin-bottom: 2rem;
