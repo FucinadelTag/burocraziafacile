@@ -31,13 +31,16 @@ module.exports = {
     serverMiddleware: [
         'redirect-ssl'
     ],
+    plugins: [
+        { src: '~plugins/analitycs.js', ssr: false }
+    ],
     router: {
         middleware: ['ActiveMenu', 'getSettings', 'getNews']
     },
     build: {
         postcss: {
             plugins: {
-                'postcss-custom-properties': false
+                'postcss-custom-properties': false,
             }
         }
     }
