@@ -1,9 +1,9 @@
 import Prismic from 'prismic-javascript'
-import fdtPrismic from '~/tools/prismic.js'
+import {getApi} from '~/tools/prismic.js'
 
 
 const getNews = async function (store, error) {
-    let api = await fdtPrismic(store);
+    let api = await getApi(store);
 
     try {
         const data = await api.query(

@@ -1,12 +1,12 @@
 <template lang="html">
     <div class="paragrafoArticolo">
-        <h2 class="subtitle is-3" v-if="paragrafo.primary.titolo[0].text !== ''" v-html="PrismicDom.RichText.asText(paragrafo.primary.titolo)"/>
+        <h2 class="subtitle is-3" v-html="PrismicDom.RichText.asText(paragrafo.primary.titolo)"/>
 
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Destra'">
             <div class="columns">
                 <div class="column">
-                    <div v-if="paragrafo.primary.testo[0].text !== ''" v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
+                    <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
                 </div>
                 <div class="column">
                     <img v-bind:src="paragrafo.primary.immagine.Quadrata.url" v-bind:alt="paragrafo.primary.alt_immagine" />
@@ -20,24 +20,28 @@
                     <img v-bind:src="paragrafo.primary.immagine.Quadrata.url" v-bind:alt="paragrafo.primary.alt_immagine" />
                 </div>
                 <div class="column">
-                    <div v-if="paragrafo.primary.testo[0].text !== ''" v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
+                    <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
                 </div>
             </div>
         </div>
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Sopra'">
             <img v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
-            <div v-if="paragrafo.primary.testo[0].text !== ''" v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
+            <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
         </div>
 
         <div v-if="paragrafo.primary.posizione_immagine == 'No_Immagine'">
-            <div v-if="paragrafo.primary.testo[0].text !== ''" v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
+            <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
         </div>
 
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Sotto'">
-            <div v-if="paragrafo.primary.testo[0].text !== ''" v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
+            <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
             <img v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+        </div>
+
+        <div class="has-text-centered" v-for="action in paragrafo.items" :key="action.id">
+            <buttonCallToAction  v-bind:callToAction="action.call_to_action"/>
         </div>
 
     </div>
@@ -46,6 +50,7 @@
 
 <script>
 import PrismicDom from 'prismic-dom'
+import buttonCallToAction from '~/components/buttonCallToAction.vue'
 
 export default {
     props: ['paragrafo'],
@@ -54,6 +59,9 @@ export default {
             PrismicDom: PrismicDom
         }
     },
+    components: {
+        buttonCallToAction,
+    }
 }
 </script>
 

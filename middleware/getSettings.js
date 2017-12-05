@@ -1,9 +1,9 @@
 import Prismic from 'prismic-javascript'
-import fdtPrismic from '~/tools/prismic.js'
+import {getApi} from '~/tools/prismic.js'
 
 
 const getSettings = async function () {
-    let api = await fdtPrismic();
+    let api = await getApi();
 
     try {
         const settings = await api.getByUID('settings', 'burocraziafacile');

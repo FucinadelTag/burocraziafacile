@@ -4,36 +4,36 @@ import PrismicDom from 'prismic-dom'
 
 const getCategorie = function (){
     return [
-        {
-            name: 'Lavoro',
-            link: 'lavoro',
-            isActive: ''
-        },
-        {
-            name: 'Impresa',
-            link: 'impresa',
-            isActive: ''
-        },
+        // {
+        //     name: 'Lavoro',
+        //     link: 'lavoro',
+        //     isActive: ''
+        // },
+        // {
+        //     name: 'Impresa',
+        //     link: 'impresa',
+        //     isActive: ''
+        // },
         // {
         //     name: 'Fisco',
         //     link: 'fisco',
         //     isActive: ''
         // },
-        // {
-        //     name: 'Auto',
-        //     link: 'auto',
-        //     isActive: ''
-        // },
+        {
+            name: 'Auto',
+            link: 'auto',
+            isActive: ''
+        },
         // {
         //     name: 'Famiglia',
         //     link: 'famiglia',
         //     isActive: ''
         // },
-        // {
-        //     name: 'Casa',
-        //     link: 'casa',
-        //     isActive: ''
-        // },
+        {
+            name: 'Casa',
+            link: 'casa',
+            isActive: ''
+        },
     ]
 }
 

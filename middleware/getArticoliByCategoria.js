@@ -1,5 +1,5 @@
 import Prismic from 'prismic-javascript'
-import fdtPrismic from '~/tools/prismic.js'
+import {getApi} from '~/tools/prismic.js'
 
 //const apiEndpoint = 'http://burocraziafacile.prismic.io/api/v2';
 
@@ -9,7 +9,7 @@ import fdtPrismic from '~/tools/prismic.js'
 // }
 
 const getCategoriaBySlug = async function (slug) {
-    let api = await fdtPrismic();
+    let api = await getApi();
 
     try {
         const categoria = await api.getByUID('categoria', slug);
@@ -20,7 +20,7 @@ const getCategoriaBySlug = async function (slug) {
 }
 
 const getPrismicDataByCategoriaId = async function (store, error) {
-    let api = await fdtPrismic(store);
+    let api = await getApi(store);
     let categoria = await getCategoriaBySlug(store.state.activeMenu);
 
     try {

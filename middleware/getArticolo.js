@@ -1,9 +1,9 @@
 import Prismic from 'prismic-javascript'
-import fdtPrismic from '~/tools/prismic.js'
+import {getApi} from '~/tools/prismic.js'
 
 
 const getArticolo = async function (uid) {
-    let api = await fdtPrismic();
+    let api = await getApi();
 
     try {
         const articolo = await api.getByUID('articolo', uid);

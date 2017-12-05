@@ -7,4 +7,18 @@ const getApi = async function () {
     return api;
 }
 
-export default getApi;
+const getDocumentById = async function (id) {
+    let api = await getApi();
+
+    console.log(id);
+
+    try {
+        const document = await api.getByID(id);
+        //console.log(document);
+        return document
+        } catch (e) {
+            error({ message: 'Document not found', statusCode: 404 })
+        }
+}
+
+export {getApi, getDocumentById};

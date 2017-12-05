@@ -28,13 +28,6 @@ import buttonCallToAction from '~/components/buttonCallToAction.vue'
 
 export default {
     props: ['paragrafo'],
-    computed: {
-        // a computed getter
-        getLinkWithTag: function (action) {
-            let linkUrl = PrismicDom.Link.url(action.link);
-            return linkUrl;
-        }
-    },
     data: function () {
         return {
             PrismicDom: PrismicDom,
