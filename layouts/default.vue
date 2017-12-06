@@ -35,7 +35,7 @@
                             Faremo il possibili per rispondere alle tue domande.
                         </p>
                         <section>
-                            <form accept-charset="UTF-8" action="https://formkeep.com/f/432b92859283" method="POST">
+                            <form accept-charset="UTF-8" action="https://formkeep.com/f/37cf41656aad" method="POST">
                                 <div class="field">
                                     <label class="label is-small">Email:</label>
                                     <p class="control">
