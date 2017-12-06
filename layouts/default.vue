@@ -61,9 +61,9 @@
 
 <style lang="scss">
     .padding {
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-top: 0.5rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
     }
 
     .default {
