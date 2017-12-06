@@ -2,6 +2,7 @@ export const state = () => ({
   list: [],
   list_news: [],
   list_home: [],
+  list_callToActions: [],
   articolo: false
 })
 
@@ -17,7 +18,10 @@ export const mutations = {
     },
     SET_ARTICOLO (state, articolo) {
         state.articolo = articolo;
-    }
+    },
+    SET_LIST_CALLTOACTION (state, list) {
+        state.list_callToActions = list;
+    },
 }
 
 export const getters = {
@@ -32,5 +36,8 @@ export const getters = {
     },
     getArticoliHome: state => {
         return state.list_home;
+    },
+    getArticoliCallToActions: (state) => {
+        return state.list_callToActions;
     }
 }

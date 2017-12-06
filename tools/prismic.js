@@ -10,7 +10,7 @@ const getApi = async function () {
 const getDocumentById = async function (id) {
     let api = await getApi();
 
-    console.log(id);
+    //console.log(id);
 
     try {
         const document = await api.getByID(id);

@@ -7,9 +7,9 @@
         <img v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" v-bind:title="immagine_principale.title" />
         <section class="abstract section" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
 
-            <section class="section" v-for="slice in articolo.data.body" :key="articolo.id">
+            <section class="section" v-for="(slice, key, index) in articolo.data.body" :key="articolo.id">
 
-                <paragrafoArticolo v-if="slice.slice_type == 'paragrafo'"  v-bind:paragrafo="slice"/>
+                <paragrafoArticolo v-if="slice.slice_type == 'paragrafo'"  v-bind:paragrafo="slice" v-bind:indice="key" />
 
                 <callToActionArticolo v-if="slice.slice_type == 'call_to_action'"  v-bind:paragrafo="slice"/>
 

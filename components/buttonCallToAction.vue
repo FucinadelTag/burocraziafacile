@@ -1,8 +1,8 @@
 <template lang="html">
     <div class="callToAction has-text-centered">
-        <a class="button is-hidden-tablet" v-bind:href="linkWithTag" target="_blank">{{contenutoTitoloMobile}}</a>
-        <a class="button is-hidden-mobile" v-bind:href="linkWithTag" target="_blank">{{contenutoTitolo}}</a>
-        <span v-html="contenutoDescrizione"/>
+        <a class="button is-hidden-tablet" v-bind:href="linkWithTag" target="_blank">{{callToAction.data.testo_mobile}}</a>
+        <a class="button is-hidden-mobile" v-bind:href="linkWithTag" target="_blank">{{callToAction.data.testo_bottone}}</a>
+        <span v-html="descrizioneHtml"/>
     </div>
 
 </template>
@@ -16,43 +16,23 @@ export default {
     data: function () {
         return {
             articolo: this.$store.getters['articoli/getArticolo'],
-            contenuto: null,
-            contenutoTitoloMobile: 'Loading...',
-            contenutoTitolo: 'Loading...',
-            linkWithTag: null,
-            contenutoDescrizione: null
+            PrismicDom: PrismicDom,
         }
     },
-    created() {
-        this.getContenuto()
-    },
-    methods: {
-        getContenuto() {
-            getDocumentById (this.callToAction.id)
-            .then((contenuto)=>{
-                this.contenuto = contenuto;
-                this.contenutoTitoloMobile = contenuto.data.testo_mobile;
-                this.contenutoTitolo = contenuto.data.testo_bottone;
-                this.contenutoDescrizione = PrismicDom.RichText.asHtml(contenuto.data.descrizione);
-
-                this.getLinkWithTag();
-            });
+    computed: {
+        // a computed getter
+        descrizioneHtml: function () {
+            return PrismicDom.RichText.asHtml(this.callToAction.data.descrizione);
         },
-        getLinkWithTag () {
-            let linkUrl = PrismicDom.Link.url(this.contenuto.data.link);
+        linkWithTag: function () {
+            let linkUrl = PrismicDom.Link.url(this.callToAction.data.link);
             let uid = this.articolo.uid;
-
-
 
             let taggedLink = linkUrl + '/?utm_source=burocraziafacile&utm_medium=articolo&utm_campaign=' + uid;
 
-            console.log (linkUrl);
-
-            this.linkWithTag = taggedLink;
-
-            //return taggedLink;
+            return taggedLink;
         },
-    },
+    }
 }
 </script>
 
@@ -62,6 +42,8 @@ export default {
     .button {
         background-color: #ea6728;
         color: #ffffff;
+        font-size: 110%;
+        font-weight: bold;
         text-transform: uppercase;
         margin-top: 2rem;
 

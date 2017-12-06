@@ -40,8 +40,8 @@
             <img v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
         </div>
 
-        <div class="has-text-centered" v-for="action in paragrafo.items" :key="action.id">
-            <buttonCallToAction  v-bind:callToAction="action.call_to_action"/>
+        <div class="has-text-centered" v-for="action in callToActionsParagrafo" :key="action.id">
+            <buttonCallToAction  v-bind:callToAction="action" />
         </div>
 
     </div>
@@ -53,10 +53,18 @@ import PrismicDom from 'prismic-dom'
 import buttonCallToAction from '~/components/buttonCallToAction.vue'
 
 export default {
-    props: ['paragrafo'],
+    props: ['paragrafo', 'indice'],
     data: function () {
         return {
-            PrismicDom: PrismicDom
+            PrismicDom: PrismicDom,
+            callToActions: this.$store.getters['articoli/getArticoliCallToActions'],
+        }
+    },
+    computed: {
+        // a computed getter
+        callToActionsParagrafo: function () {
+            console.log (this.indice);
+            return this.callToActions[this.indice];
         }
     },
     components: {
