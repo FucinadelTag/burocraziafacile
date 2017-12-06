@@ -1,6 +1,6 @@
 <template lang="html">
     <div class="paragrafoArticolo">
-        <h2 class="subtitle is-3" v-html="PrismicDom.RichText.asText(paragrafo.primary.titolo)"/>
+        <h2 class="subtitle is-3" v-if="paragrafo.primary.titolo !=''" v-html="PrismicDom.RichText.asText(paragrafo.primary.titolo)"/>
 
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Destra'">
