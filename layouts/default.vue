@@ -58,7 +58,7 @@
                         <p class="title is-4">
                             Privacy
                         </p>
-                         <p>
+                        <p>
                             <strong>Burocraziafacile</strong> è un progetto di <i>Fucina del Tag</i>
                             <br> Via Ampère 61/A - P.Iva 03201900960
                          </p>
@@ -66,6 +66,7 @@
 
                 </div>
             </div>
+            <!-- <cookie-law theme="base" message="Questo sito Web utilizza i cookie per assicurarti la migliore esperienzadi uso." buttonClass='button' buttonText='Ok'></cookie-law> -->
         </footer>
     </div>
 
@@ -76,13 +77,15 @@
     import MyMenu from '~/components/MyMenu.vue'
     import listNewsDestra from '~/components/listNewsDestra.vue'
     import formNewsletter from '~/components/formNewsletter.vue'
-
+    import CookieLaw from 'vue-cookie-law'
 
     export default {
         components: {
             MyMenu,
             listNewsDestra,
-            formNewsletter
+            formNewsletter,
+            // CookieLaw
+
         },
         data (context) {
             //console.log(context);
@@ -97,8 +100,8 @@
                 meta: [
                     { hid: 'description', name: 'description', content: this.description }
                 ]
-        }
-  }
+            }
+        },
     }
 </script>
 
