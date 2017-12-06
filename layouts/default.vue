@@ -17,10 +17,53 @@
         </div>
         <footer class="footer">
             <div class="container">
-                <div class="content has-text-centered">
-                 <p>
-                    <strong>Burocraziafacile</strong> è un progetto di <i>Fucina del Tag</i>. | Via Ampère 61/A - P.Iva 03201900960
-                 </p>
+
+                <div class="columns">
+                    <div class="column">
+                        <p class="title is-4">
+                            Chi siamo
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div class="column">
+                        <p class="title is-4">
+                            Dubbi o domande?
+                        </p>
+                        <p class="subtitle is-6">
+                            Faremo il possibili per rispondere alle tue domande.
+                        </p>
+                        <section>
+                            <form accept-charset="UTF-8" action="https://formkeep.com/f/432b92859283" method="POST">
+                                <div class="field">
+                                    <label class="label is-small">Email:</label>
+                                    <p class="control">
+                                        <input required class="input" type="email" name="email" placeholder="Email">
+                                    </p>
+                                </div>
+                                <div class="field">
+                                    <label class="label is-small">Messaggio:</label>
+                                    <p class="control">
+                                        <textarea required class="textarea" name="messaggio" placeholder="Messaggio"></textarea>
+                                    </p>
+                                </div>
+                                <div class="control has-text-centered">
+                                    <button class="button">Contattaci!</button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                    <div class="column">
+                        <p class="title is-4">
+                            Privacy
+                        </p>
+                         <p>
+                            <strong>Burocraziafacile</strong> è un progetto di <i>Fucina del Tag</i>
+                            <br> Via Ampère 61/A - P.Iva 03201900960
+                         </p>
+                    </div>
+
                 </div>
             </div>
         </footer>
