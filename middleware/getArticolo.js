@@ -76,7 +76,6 @@ export default async function ({ store, route, error }) {
 
     let articolo  = await getArticolo (uid);
     let callToActions = await getParagrafiMap (articolo);
-    console.log(callToActions);
     if (typeof articolo != 'undefined'){
         store.commit('articoli/SET_ARTICOLO', articolo)
         store.commit('articoli/SET_LIST_CALLTOACTION', callToActions)

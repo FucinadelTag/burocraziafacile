@@ -11,11 +11,12 @@
 
                 <paragrafoArticolo v-if="slice.slice_type == 'paragrafo'"  v-bind:paragrafo="slice" v-bind:indice="key" />
 
-                <callToActionArticolo v-if="slice.slice_type == 'call_to_action'"  v-bind:paragrafo="slice"/>
+                <callToActionArticolo v-if="slice.slice_type == 'riepilogo_call_to_action'"  v-bind:paragrafo="slice"/>
 
             </section>
-            <hr>
-            <section class="comments">
+
+            <section class="section comments">
+                <hr>
                 <vue-disqus shortname="https-www-burocraziafacile-it" :identifier="articolo.uid" :url="articoloAbsoluteUrl"></vue-disqus>
             </section>
 

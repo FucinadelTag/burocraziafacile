@@ -39,7 +39,7 @@ export default {
 <style lang="scss">
 
 .callToAction {
-    padding: 2rem;
+    padding: 1rem;
 
     .descrizione {
         font-style: italic;

@@ -64,9 +64,6 @@ export default {
         // a computed getter
         callToActionsParagrafo: function () {
             let callToActionsArray = this.callToActions[this.indice];
-
-            console.log(callToActionsArray);
-
             if (callToActionsArray[0] !== null){
                 return this.callToActions[this.indice];
             } else {
