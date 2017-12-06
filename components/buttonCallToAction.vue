@@ -2,7 +2,7 @@
     <div class="callToAction has-text-centered">
         <a class="button is-hidden-tablet" v-bind:href="linkWithTag" target="_blank">{{callToAction.data.testo_mobile}}</a>
         <a class="button is-hidden-mobile" v-bind:href="linkWithTag" target="_blank">{{callToAction.data.testo_bottone}}</a>
-        <span v-html="descrizioneHtml"/>
+        <span class="descrizione" v-html="descrizioneHtml"/>
     </div>
 
 </template>
@@ -39,13 +39,19 @@ export default {
 <style lang="scss">
 
 .callToAction {
+    padding: 2rem;
+
+    .descrizione {
+        font-style: italic;
+        color: $orangePratiche;
+        font-weight: bold
+    }
     .button {
         background-color: #ea6728;
         color: #ffffff;
         font-size: 110%;
         font-weight: bold;
         text-transform: uppercase;
-        margin-top: 2rem;
 
         &:hover {
             color: #ffffff;

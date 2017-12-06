@@ -17,11 +17,15 @@ const getArticolo = async function (uid) {
 
 const getCallToAction = async function (item) {
 
-        let callToAction = await getDocumentById (item.call_to_action.id);
+        if (item.call_to_action.id){
+            let callToAction = await getDocumentById (item.call_to_action.id);
 
-        //console.log(callToAction);
+            //console.log(callToAction);
 
-        return callToAction;
+            return callToAction;
+        }
+
+        return null
 
 }
 
@@ -43,7 +47,13 @@ const manageParagrafo = async function (slice, key) {
 
 const getParagrafiMap = async function (articolo) {
     let arrayCallToAction = await Promise.all (_.map(articolo.data.body, await manageParagrafo));
-    return arrayCallToAction;
+
+    if (arrayCallToAction.length > 0){
+        return arrayCallToAction;
+    }
+
+    return null;
+
 }
 
 const getParagrafi = async function (articolo) {

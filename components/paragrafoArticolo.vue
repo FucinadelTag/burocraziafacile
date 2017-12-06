@@ -40,7 +40,7 @@
             <img v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
         </div>
 
-        <div class="has-text-centered" v-for="action in callToActionsParagrafo" :key="action.id">
+        <div class="has-text-centered" v-if="callToActionsParagrafo" v-for="action in callToActionsParagrafo" :key="action.id">
             <buttonCallToAction  v-bind:callToAction="action" />
         </div>
 
@@ -63,8 +63,18 @@ export default {
     computed: {
         // a computed getter
         callToActionsParagrafo: function () {
-            console.log (this.indice);
-            return this.callToActions[this.indice];
+            let callToActionsArray = this.callToActions[this.indice];
+
+            console.log(callToActionsArray);
+
+            if (callToActionsArray[0] !== null){
+                return this.callToActions[this.indice];
+            } else {
+                return false
+            }
+
+
+
         }
     },
     components: {
