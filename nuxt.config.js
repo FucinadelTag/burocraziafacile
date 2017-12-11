@@ -32,7 +32,8 @@ module.exports = {
         'redirect-ssl'
     ],
     plugins: [
-        { src: '~plugins/analitycs.js', ssr: false }
+        { src: '~plugins/analitycs.js', ssr: false },
+        { src: '~plugins/vue-cookie-law.js', ssr: false }
     ],
     router: {
         middleware: ['ActiveMenu', 'getSettings', 'getNews']

@@ -66,7 +66,7 @@
 
                 </div>
             </div>
-            <!-- <cookie-law theme="base" message="Questo sito Web utilizza i cookie per assicurarti la migliore esperienzadi uso." buttonClass='button' buttonText='Ok'></cookie-law> -->
+            <cookie-law theme="base" message="Questo sito Web utilizza i cookie per assicurarti la migliore esperienzadi uso." buttonClass='button' buttonText='Ok'></cookie-law>
         </footer>
     </div>
 
@@ -77,15 +77,12 @@
     import MyMenu from '~/components/MyMenu.vue'
     import listNewsDestra from '~/components/listNewsDestra.vue'
     import formNewsletter from '~/components/formNewsletter.vue'
-    import CookieLaw from 'vue-cookie-law'
 
     export default {
         components: {
             MyMenu,
             listNewsDestra,
-            formNewsletter,
-            // CookieLaw
-
+            formNewsletter
         },
         data (context) {
             //console.log(context);
@@ -116,7 +113,28 @@
         .footer {
             margin-top: 5rem;
             padding-bottom: 3rem;
+            .Cookie {
+                font-size: 0.8rem;
+                background-color: #000000;
+                color: #ffffff;
+                margin: 0rem;
+                > * {
+                    margin: 0;
+                    align-self: center;
+                }
+            }
+            .Cookie--base {
+                padding-left: 0.1rem;
+                padding-top: 0.1rem;
+                padding-bottom: 0.1rem;
+                margin: 0rem;
+            },
+            .Cookie__button {
+                padding-top: 0rem;
+                padding-bottom: 0rem;
+            }
         }
+
         //border-right: 1px solid;
         //border-right-color: $grey-ligh;
     }
