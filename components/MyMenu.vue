@@ -15,7 +15,7 @@
                 <nav class="navbar myMenu" role="navigation" aria-label="main navigation">
                     <div class="navbar-brand">
                         <a class="navbar-item" href="/">
-                            <img v-bind:src="logo" alt="Burocraziafacile">
+                            <img class="imglogo" v-bind:src="logo" alt="Burocraziafacile">
                         </a>
 
                         <button class="button navbar-burger" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
@@ -63,8 +63,13 @@ export default {
 
 <style lang="scss">
 .logo {
-    padding-top: 10px;
+    padding-top: 0px;
 }
+
+.navbar-item img {
+    max-height: 4rem;
+}
+
 .myMenu {
     margin-bottom: 10px;
     border-bottom: 1px solid;
@@ -72,6 +77,10 @@ export default {
     //margin-top: 10px;
     //border-top: 1px solid;
     //border-top-color: $grey;
+
+    .imglogo {
+        padding: 0px;
+    }
 
     .active {
         background-color: #f1f1f1;
