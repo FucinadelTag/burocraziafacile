@@ -11,7 +11,7 @@ const getArticoliHome = async function (store, error) {
                 Prismic.Predicates.at('document.type', 'articolo'),
                 Prismic.Predicates.at('my.articolo.tipo', 'articolo')
             ],
-            { pageSize : 20, page : 1, orderings : '[my.articolo.first_publication_date desc]', fetchLinks: 'categoria.uid' }
+            { pageSize : 20, page : 1, orderings : '[document.first_publication_date desc]', fetchLinks: 'categoria.uid' }
         );
         return data
     } catch (e) {

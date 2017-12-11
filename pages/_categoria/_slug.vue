@@ -114,6 +114,10 @@ export default {
 
     }
 
+    .title {
+        font-weight: 700;
+        font-size: 2.6rem;
+    }
 
     .abstract {
         font-style: italic;

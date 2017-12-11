@@ -90,6 +90,11 @@ export default {
         //border: 1px solid;
         //border-color: $grey-ligh;
     }
+
+    .subtitle {
+        font-weight: 700;
+        font-size: 2.1rem;
+    }
 }
 
 </style>
