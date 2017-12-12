@@ -105,6 +105,8 @@ export default {
                 { hid: 'og:description', property: 'og:description', content: PrismicDom.RichText.asText(this.articolo.data.abstract)},
                 { hid: 'og:image', property: 'og:image', content: this.immagine_principale.url},
                 { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: this.immagine_principale.url},
+                { hid: 'og:url', property: 'og:url', content: this.articoloAbsoluteUrl},
+                { hid: 'fb:app_id', property: 'fb:app_id', content: '1888065901523051'},
 
             ],
             script: [
