@@ -103,6 +103,7 @@ export default {
                 { hid: 'og:title', property: 'og:title', content: PrismicDom.RichText.asText(this.articolo.data.titolo) },
                 { hid: 'og:type', property: 'og:type', content: 'article'},
                 { hid: 'og:description', property: 'og:description', content: PrismicDom.RichText.asText(this.articolo.data.abstract)},
+                { hid: 'og:image', property: 'og:image', content: this.immagine_principale.url},
                 { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: this.immagine_principale.url},
 
             ],
