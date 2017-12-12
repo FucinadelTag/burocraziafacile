@@ -2,8 +2,18 @@
     <article class="content slug">
         <header class="testata">
             <h1 class="title is-2" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
-            <dataArticolo v-bind:articolo="articolo"/>
+
         </header>
+        <div class="columns">
+            <div class="column addthis_inline_share_toolbox"></div>
+            <div class="column">
+                <span class="is-pulled-right">
+                    <dataArticolo v-bind:articolo="articolo"/>
+                </span>
+
+            </div>
+
+        </div>
         <img v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" v-bind:title="immagine_principale.title" />
         <section class="abstract section" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
 
@@ -90,6 +100,9 @@ export default {
             title:  this.articolo.data.meta_title != null ? this.articolo.data.meta_title : this.$store.getters.getTitle,
             meta: [
                 { hid: 'description', name: 'description', content: this.articolo.data.meta_description != null ? this.articolo.data.meta_description : this.$store.getters.getDescription }
+            ],
+            script: [
+                { src: 'https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a3005a731053dc2' }
             ]
         }
     }
