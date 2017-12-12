@@ -99,7 +99,12 @@ export default {
         return {
             title:  this.articolo.data.meta_title != null ? this.articolo.data.meta_title : this.$store.getters.getTitle,
             meta: [
-                { hid: 'description', name: 'description', content: this.articolo.data.meta_description != null ? this.articolo.data.meta_description : this.$store.getters.getDescription }
+                { hid: 'description', name: 'description', content: this.articolo.data.meta_description != null ? this.articolo.data.meta_description : this.$store.getters.getDescription },
+                { hid: 'og:title', property: 'og:title', content: PrismicDom.RichText.asText(this.articolo.data.titolo) },
+                { hid: 'og:type', property: 'og:type', content: 'article'},
+                { hid: 'og:description', property: 'og:description', content: PrismicDom.RichText.asText(this.articolo.data.abstract)},
+                { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: this.immagine_principale.url},
+
             ],
             script: [
                 { src: 'https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a3005a731053dc2' }
