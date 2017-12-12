@@ -97,9 +97,9 @@ export default {
     },
     head () {
         return {
-            title:  this.articolo.data.meta_title != null ? this.articolo.data.meta_title : this.$store.getters.getTitle,
+            title:  this.articolo.data.meta_title != null ? this.articolo.data.meta_title : PrismicDom.RichText.asText(this.articolo.data.titolo),
             meta: [
-                { hid: 'description', name: 'description', content: this.articolo.data.meta_description != null ? this.articolo.data.meta_description : this.$store.getters.getDescription },
+                { hid: 'description', name: 'description', content: this.articolo.data.meta_description != null ? this.articolo.data.meta_description : PrismicDom.RichText.asText(this.articolo.data.abstract) },
                 { hid: 'og:title', property: 'og:title', content: PrismicDom.RichText.asText(this.articolo.data.titolo) },
                 { hid: 'og:type', property: 'og:type', content: 'article'},
                 { hid: 'og:description', property: 'og:description', content: PrismicDom.RichText.asText(this.articolo.data.abstract)},
