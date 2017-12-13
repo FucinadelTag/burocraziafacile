@@ -66,9 +66,6 @@ export default {
     padding-top: 0px;
 }
 
-.navbar-item img {
-    max-height: 4rem;
-}
 
 .myMenu {
     margin-bottom: 10px;
@@ -80,6 +77,7 @@ export default {
 
     .imglogo {
         padding: 0px;
+        max-height: 3.3rem;
     }
 
     .active {

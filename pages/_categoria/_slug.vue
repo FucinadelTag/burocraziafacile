@@ -4,10 +4,10 @@
             <h1 class="title is-2" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
 
         </header>
-        <div class="columns">
-            <div class="column addthis_inline_share_toolbox"></div>
+        <div class="columns barraShare">
+            <div class="column is-3 addthis_inline_share_toolbox"></div>
             <div class="column">
-                <span class="is-pulled-right">
+                <span class="is-pulled-left">
                     <dataArticolo v-bind:articolo="articolo"/>
                 </span>
 
@@ -133,6 +133,10 @@ export default {
             padding-right: 0rem;
     	}
 
+    }
+
+    .barraShare {
+        margin-bottom: 1.2rem;
     }
 
     .title {

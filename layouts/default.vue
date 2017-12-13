@@ -113,6 +113,12 @@
     }
 
     .default {
+        .contenuto {
+            //margin-top: 10px;
+            //border-top: 1px solid;
+            //border-top-color: $grey-ligh;
+        }
+
         .footer {
             margin-top: 5rem;
             padding-bottom: 3rem;
