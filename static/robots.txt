@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+sitemap: http://a127962.hostedsitemap.com/4029146/sitemap.xml.gz
