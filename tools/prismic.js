@@ -21,4 +21,19 @@ const getDocumentById = async function (id) {
         }
 }
 
-export {getApi, getDocumentById};
+
+const getDocumentByUID = async function (type, UID) {
+    let api = await getApi();
+
+    //console.log(id);
+
+    try {
+        const document = await api.getByUID(type, UID);
+        //console.log(document);
+        return document
+        } catch (e) {
+            error({ message: 'Document by UID not found', statusCode: 404 })
+        }
+}
+
+export {getApi, getDocumentById, getDocumentByUID};

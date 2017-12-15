@@ -8,6 +8,8 @@ module.exports = {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            { rel: 'alternate', type: 'application/rss+xml', href: 'http://a127962.hostedsitemap.com/4029146/feed_rss.xml' },
+
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700' }
         ]
     },
@@ -29,7 +31,7 @@ module.exports = {
         }
     },
     serverMiddleware: [
-        'redirect-ssl'
+        'redirect-ssl',
     ],
     plugins: [
         { src: '~plugins/analitycs.js', ssr: false },

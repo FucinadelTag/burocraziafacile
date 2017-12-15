@@ -16,7 +16,7 @@ const getNews = async function (store, error) {
         return data
     } catch (e) {
         console.log(e);
-        error({ message: 'Data not found', statusCode: 404 })
+        error({ message: 'News not found', statusCode: 404 })
     }
 }
 
