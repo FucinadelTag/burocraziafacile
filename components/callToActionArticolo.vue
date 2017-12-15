@@ -2,10 +2,11 @@
     <div class="box callToAction has-text-centered">
         <div class="subtitle is-4" v-if="paragrafo.primary.titolo[0].text !== ''" v-html="PrismicDom.RichText.asText(paragrafo.primary.titolo)"/>
         <div class="subtitlem is-6" v-html="PrismicDom.RichText.asHtml(paragrafo.primary.descrizione)"/>
-        <hr>
-        <div v-for="actionArray in callToActions" v-bind:action="actionArray">
+
+        <div class="listButtons" v-for="actionArray in callToActions" v-bind:action="actionArray">
             <div v-for="action in actionArray" class="columns is-multiline">
                 <div v-if="action !== null" class="column has-text-centered">
+                    <hr>
                     <buttonCallToAction  v-bind:callToAction="action"/>
                 </div>
 
@@ -35,5 +36,9 @@ export default {
 </script>
 
 <style lang="scss">
-
+    .callToAction {
+        .listButtons {
+            padding-bottom: 0.5rem;
+        }
+    }
 </style>
