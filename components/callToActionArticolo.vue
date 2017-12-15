@@ -7,7 +7,6 @@
             <div v-for="action in actionArray" class="columns is-multiline">
                 <div v-if="action !== null" class="column has-text-centered">
                     <buttonCallToAction  v-bind:callToAction="action"/>
-                    <hr>
                 </div>
 
             </div>

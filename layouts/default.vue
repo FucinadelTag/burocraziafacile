@@ -24,7 +24,13 @@
                             Chi siamo
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Burocrazia Facile è il sito d'informazione che ti aiuta a trovare soluzioni semplici e veloci alle pratiche di tutti i giorni con categorie dedicate al mondo della casa, dell'auto e del lavoro.
+                        </p>
+                        <p>
+                            Le guide gratuite ti mostrano passo dopo passo le procedure per completare le tue pratiche e ottenere tutti i documenti necessari.
+                        </p>
+                        <p>
+                            La sezione novità ti consente di rimanere aggiornato sulle ultime notizie, incentivi e scadenze della burocrazia.
                         </p>
                     </div>
                     <div class="column">
@@ -32,7 +38,7 @@
                             Dubbi o domande?
                         </p>
                         <p class="subtitle is-6">
-                            Faremo il possibili per rispondere alle tue domande.
+                            Scrivici un messaggio e ti risponderemo il prima possibile.
                         </p>
                         <section>
                             <form accept-charset="UTF-8" action="https://formkeep.com/f/37cf41656aad" method="POST">
@@ -54,16 +60,22 @@
                             </form>
                         </section>
                     </div>
-                    <div class="column">
+                    <div class="column has-text-centered">
                         <p class="title is-4">
                             Privacy
                         </p>
                         <p>
                             <a href="//www.iubenda.com/privacy-policy/8226676" class="iubenda-white no-brand iubenda-embed" title="Privacy Policy">Privacy Policy</a>
                         </p>
-                        <p>
-                            <strong>Burocraziafacile</strong> è un progetto di <i>Fucina del Tag</i>
-                            <br> Via Ampère 61/A - P.Iva 03201900960
+                        <br>
+                        <p class="has-text-centered">
+                            <strong>Burocraziafacile.it</strong><br>è un progetto di <i>Fucina del Tag</i>
+                            <p>
+                                <br> Via Ampère 61/A
+                                <br>20131 Milano
+                                <br>P.Iva 03201900960
+                            </p>
+
                          </p>
                     </div>
 

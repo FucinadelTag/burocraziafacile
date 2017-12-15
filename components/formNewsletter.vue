@@ -1,7 +1,7 @@
 <template lang="html">
     <section class="box formNewsletter">
-        <p class="title is-4">Rimani sempre aggiornato</p>
-        <p class="subtitle is-6">Ricevi le nostre notizie una volta al mese</p>
+        <p class="title is-4 has-text-centered">Rimani sempre aggiornato</p>
+        <p class="subtitle is-6 has-text-centered">Ricevi una volta al mese consigli e guide gratuite sulle pratiche riguardanti auto, casa e lavoro.</p>
         <form accept-charset="UTF-8" action="https://formkeep.com/f/432b92859283" method="POST">
             <div class="field">
                 <p class="control">
@@ -12,9 +12,9 @@
                 <button class="button">Iscriviti adesso</button>
             </div>
         </form>
-        <p class="spiegazione">
+        <!-- <p class="spiegazione">
             Una volta al mese ti invieremo un'email con le ultime novità e istruzioni per <strong>muoverti con facilità</strong> nel mondo della burocrazia in italia.
-        </p>
+        </p> -->
     </section>
 </template>
 
