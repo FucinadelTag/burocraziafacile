@@ -24,7 +24,7 @@
                             Chi siamo
                         </p>
                         <p>
-                            Burocrazia Facile è il sito d'informazione che ti aiuta a trovare soluzioni semplici e veloci alle pratiche di tutti i giorni con categorie dedicate al mondo della casa, dell'auto e del lavoro.
+                            BurocraziaFacile.it è il sito d'informazione che ti aiuta a trovare soluzioni semplici e veloci alle pratiche di tutti i giorni con categorie dedicate al mondo della casa, dell'auto e del lavoro.
                         </p>
                         <p>
                             Le guide gratuite ti mostrano passo dopo passo le procedure per completare le tue pratiche e ottenere tutti i documenti necessari.
