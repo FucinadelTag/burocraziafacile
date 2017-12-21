@@ -35,6 +35,7 @@ module.exports = {
     ],
     plugins: [
         { src: '~plugins/analitycs.js', ssr: false },
+        { src: '~plugins/facebook.js', ssr: false },
         { src: '~plugins/vue-cookie-law.js', ssr: false },
         { src: '~plugins/iubenda.js', ssr: false }
     ],
