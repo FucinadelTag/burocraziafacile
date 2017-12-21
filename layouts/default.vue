@@ -15,74 +15,7 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container">
-
-                <div class="columns">
-                    <div class="column">
-                        <p class="title is-4">
-                            Chi siamo
-                        </p>
-                        <p>
-                            BurocraziaFacile.it è il sito d'informazione che ti aiuta a trovare soluzioni semplici e veloci alle pratiche di tutti i giorni con categorie dedicate al mondo della casa, dell'auto e del lavoro.
-                        </p>
-                        <p>
-                            Le guide gratuite ti mostrano passo dopo passo le procedure per completare le tue pratiche e ottenere tutti i documenti necessari.
-                        </p>
-                        <p>
-                            La sezione novità ti consente di rimanere aggiornato sulle ultime notizie, incentivi e scadenze della burocrazia.
-                        </p>
-                    </div>
-                    <div class="column">
-                        <p class="title is-4">
-                            Dubbi o domande?
-                        </p>
-                        <p class="subtitle is-6">
-                            Scrivici un messaggio e ti risponderemo il prima possibile.
-                        </p>
-                        <section>
-                            <form accept-charset="UTF-8" action="https://formkeep.com/f/37cf41656aad" method="POST">
-                                <div class="field">
-                                    <label class="label is-small">Email:</label>
-                                    <p class="control">
-                                        <input required class="input" type="email" name="email" placeholder="Email">
-                                    </p>
-                                </div>
-                                <div class="field">
-                                    <label class="label is-small">Messaggio:</label>
-                                    <p class="control">
-                                        <textarea required class="textarea" name="messaggio" placeholder="Messaggio"></textarea>
-                                    </p>
-                                </div>
-                                <div class="control has-text-centered">
-                                    <button class="button">Contattaci!</button>
-                                </div>
-                            </form>
-                        </section>
-                    </div>
-                    <div class="column has-text-centered">
-                        <p class="title is-4">
-                            Privacy
-                        </p>
-                        <p>
-                            <a href="//www.iubenda.com/privacy-policy/8226676" class="iubenda-white no-brand iubenda-embed" title="Privacy Policy">Privacy Policy</a>
-                        </p>
-                        <br>
-                        <p class="has-text-centered">
-                            <strong>Burocraziafacile.it</strong><br>è un progetto di <i>Fucina del Tag</i>
-                            <p>
-                                <br> Via Ampère 61/A
-                                <br>20131 Milano
-                                <br>P.Iva 03201900960
-                            </p>
-
-                         </p>
-                    </div>
-
-                </div>
-            </div>
-            <cookie-law theme="base" message="Questo sito Web utilizza i cookie per assicurarti la migliore esperienzadi uso." buttonClass='button' buttonText='Ok'></cookie-law>
-        </footer>
+        <myFooter/>
     </div>
 
 
@@ -92,12 +25,15 @@
     import MyMenu from '~/components/MyMenu.vue'
     import listNewsDestra from '~/components/listNewsDestra.vue'
     import formNewsletter from '~/components/formNewsletter.vue'
+    import myFooter from '~/components/footer.vue'
 
     export default {
         components: {
             MyMenu,
             listNewsDestra,
-            formNewsletter
+            formNewsletter,
+            myFooter
+
         },
         data (context) {
             //console.log(context);
