@@ -68,7 +68,7 @@
 
             </div>
         </div>
-        <modal name="noteLegali" :adaptive="true" :scrollable="true">
+        <modal name="noteLegali" :adaptive="true">
             <div class="noteLegali">
                 <p>
                     Note Legali
