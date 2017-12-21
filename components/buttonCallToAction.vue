@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="callToAction has-text-centered">
-        <a class="button is-hidden-tablet" v-bind:href="linkWithTag" target="_blank">{{callToAction.data.testo_mobile}}</a>
-        <a class="button is-hidden-mobile" v-bind:href="linkWithTag" target="_blank">{{callToAction.data.testo_bottone}}</a>
+        <a class="button is-hidden-tablet" v-bind:href="linkWithTag" v-on:click="articleTrack(callToAction.uid)" target="_blank">{{callToAction.data.testo_mobile}}</a>
+        <a class="button is-hidden-mobile" v-bind:href="linkWithTag" v-on:click="articleTrack(callToAction.uid)" target="_blank">{{callToAction.data.testo_bottone}}</a>
         <span class="descrizione" v-html="descrizioneHtml"/>
     </div>
 
@@ -32,7 +32,17 @@ export default {
 
             return taggedLink;
         },
+    },
+    methods: {
+        articleTrack: function (uid) {
+            fbq('trackCustom', 'ArticleAction', {
+                button_uid: uid,
+                articolo_uid: this.articolo.uid
+            });
+
+        }
     }
+
 }
 </script>
 

@@ -2,7 +2,7 @@ export default ({ app }) => {
   /*
   ** Only run on client-side and only in production mode
   */
-  //if (process.env.NODE_ENV !== 'production') return
+  if (process.env.NODE_ENV !== 'production') return
 
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
