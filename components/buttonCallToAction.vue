@@ -40,6 +40,13 @@ export default {
                 articolo_uid: this.articolo.uid
             });
 
+            ga('send', 'event', {
+                eventCategory: 'ArticleAction',
+                eventAction: 'click',
+                eventLabel: this.articolo.uid,
+                eventValue: uid
+            });
+
         }
     }
 
