@@ -62,7 +62,7 @@
 
                      </p>
                      <p class="is-size-7">
-                        <a target="_blank" href="/note-legali">Note legali</a>
+                        <a href="/note-legali">Note legali</a>
                      </p>
                 </div>
 
