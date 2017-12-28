@@ -72,14 +72,8 @@
 </template>
 
 <script>
-import noteLegali from '~/components/note_legali.vue'
-
 
 export default {
-    components: {
-        noteLegali,
-    }
-
 }
 </script>
 
