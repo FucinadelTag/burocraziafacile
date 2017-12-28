@@ -40,11 +40,11 @@ export default {
                 articolo_uid: this.articolo.uid
             });
 
-            ga('send', 'event', {
+            ga('send', {
+                hitType: 'event',
                 eventCategory: 'ArticleAction',
-                eventAction: 'click',
-                eventLabel: this.articolo.uid,
-                eventValue: uid
+                eventAction: uid,
+                eventLabel: this.articolo.uid
             });
 
         }
