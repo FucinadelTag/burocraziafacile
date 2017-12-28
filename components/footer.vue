@@ -62,7 +62,7 @@
 
                      </p>
                      <p class="is-size-7">
-                        <!-- <a v-on:click.prevent="noteLegali" href="#">Note legali</a> -->
+                        <a target="_blank" href="/note-legali">Note legali</a>
                      </p>
                 </div>
 
@@ -76,9 +76,6 @@ import noteLegali from '~/components/note_legali.vue'
 
 
 export default {
-    methods: {
-        noteLegali () { this.$modal.show('noteLegali') }
-    },
     components: {
         noteLegali,
     }
