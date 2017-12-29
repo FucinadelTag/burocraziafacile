@@ -15,7 +15,7 @@
                                 <!-- <dataArticolo v-bind:articolo="firstArticle"/> -->
                             </div>
                             <div class="column">
-                                <figure class="image" itemscope itemtype="https://schema.org/ImageObject">
+                                <figure class="image">
                                   <img itemprop="image" v-bind:src="firstArticle.data.immagine_principale[0].immagine.url" v-bind:alt="firstArticle.data.immagine_principale[0].alt" v-bind:title="firstArticle.data.immagine_principale[0].title" />
                                 </figure>
                             </div>

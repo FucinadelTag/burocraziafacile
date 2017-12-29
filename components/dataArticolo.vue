@@ -1,6 +1,9 @@
 <template lang="html">
     <div class="dataArticolo">
-        <span class="data"><time itemprop="datePublished">{{dataArticolo}}</time></span> |
+        <meta itemprop="datePublished" :content="dataArticolo" />
+        <meta itemprop="publisher" content="Burocraziafacile.it" />
+        <meta itemprop="author" content="Burocraziafacile.it" />
+        <span class="data"><time itemprop="dateModified">{{dataArticolo}}</time></span> |
         <span class="tag" itemprop="keywords">
             {{articolo.data.categoria.uid}}
         </span>
