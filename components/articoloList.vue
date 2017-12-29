@@ -1,17 +1,19 @@
 <template lang="html">
-    <article class="articoloList">
-        <a v-bind:href="linkArticolo">
+    <article class="articoloList" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <a v-bind:href="linkArticolo" itemprop="url">
             <div class="columns">
                 <div class="column">
-                    <h2 class="title is-2" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h2>
+                    <h2 itemprop="name headline" class="title is-2" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h2>
                     <dataArticolo v-bind:articolo="articolo"/>
                 </div>
             </div>
             <div class="columns">
                 <div class="column is-two-quarters">
-                    <img v-bind:src="articolo.data.immagine_principale[0].immagine.url" v-bind:title="articolo.data.immagine_principale[0].alt" v-bind:alt="articolo.data.immagine_principale[0].alt" />
+                    <figure itemscope itemtype="https://schema.org/ImageObject">
+                        <img itemprop="image" v-bind:src="articolo.data.immagine_principale[0].immagine.url" v-bind:title="articolo.data.immagine_principale[0].alt" v-bind:alt="articolo.data.immagine_principale[0].alt" />
+                    </figure>
                 </div>
-                <div class="column is-two-quarters" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
+                <div itemprop="description"  class="column is-two-quarters" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
             </div>
         </a>
 

@@ -1,22 +1,22 @@
 <template>
     <div class="home">
-            <div class="principale">
-                <a v-bind:href="'/' + firstArticle.data.categoria.uid + '/' + firstArticle.uid">
+            <div class="principale" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+                <a itemprop="url" v-bind:href="'/' + firstArticle.data.categoria.uid + '/' + firstArticle.uid">
                     <article class="box tile is-child">
                         <div class="columns">
                             <div class="colum">
-                                <h1 class="title is-2" v-html="PrismicDom.RichText.asText(firstArticle.data.titolo)"/>
+                                <h1 itemprop="title headline" class="title is-2" v-html="PrismicDom.RichText.asText(firstArticle.data.titolo)"/>
                             </div>
                         </div>
                         <hr>
                         <div class="columns">
                             <div class="column is-one-third">
-                                <p v-html="PrismicDom.RichText.asText(firstArticle.data.abstract)"/>
+                                <p itemprop="description" v-html="PrismicDom.RichText.asText(firstArticle.data.abstract)"/>
                                 <!-- <dataArticolo v-bind:articolo="firstArticle"/> -->
                             </div>
                             <div class="column">
-                                <figure class="image">
-                                  <img v-bind:src="firstArticle.data.immagine_principale[0].immagine.url" v-bind:alt="firstArticle.data.immagine_principale[0].alt" v-bind:title="firstArticle.data.immagine_principale[0].title" />
+                                <figure class="image" itemscope itemtype="https://schema.org/ImageObject">
+                                  <img itemprop="image" v-bind:src="firstArticle.data.immagine_principale[0].immagine.url" v-bind:alt="firstArticle.data.immagine_principale[0].alt" v-bind:title="firstArticle.data.immagine_principale[0].title" />
                                 </figure>
                             </div>
                         </div>
@@ -24,8 +24,8 @@
                 </a>
             </div>
             <div class="columns is-multiline">
-                <div v-for="articolo in altriArticoli" :key="articolo.id" class="column is-half">
-                    <a v-bind:href="'/' + articolo.data.categoria.uid + '/' + articolo.uid">
+                <div v-for="articolo in altriArticoli" :key="articolo.id" class="column is-half" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+                    <a itemprop="url" v-bind:href="'/' + articolo.data.categoria.uid + '/' + articolo.uid">
                         <article class="boxArticolo">
                             <div class="columns">
                                 <!-- <div class="column">
@@ -33,15 +33,15 @@
                                     <a class="linkMore" v-bind:href="'/' + articolo.data.categoria.uid + '/' + articolo.uid">Leggi Tutto</a>
                                 </div> -->
                                 <div class="column">
-                                    <figure class="">
-                                        <img v-bind:src="articolo.data.immagine_principale[0].immagine.url" v-bind:alt="articolo.data.immagine_principale[0].alt" v-bind:title="articolo.data.immagine_principale[0].title" />
+                                    <figure class="" itemscope itemtype="https://schema.org/ImageObject">
+                                        <img itemprop="image" v-bind:src="articolo.data.immagine_principale[0].immagine.url" v-bind:alt="articolo.data.immagine_principale[0].alt" v-bind:title="articolo.data.immagine_principale[0].title" />
                                     </figure>
                                     <!-- <dataArticolo v-bind:articolo="articolo"/> -->
                                 </div>
                             </div>
                             <div class="columns">
                                 <div class="column">
-                                    <h2 class="title is-4" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"/>
+                                    <h2 itemprop="title headline" class="title is-4" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"/>
                                 </div>
                             </div>
 
