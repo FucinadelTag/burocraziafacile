@@ -3,6 +3,7 @@
         <meta itemprop="datePublished" :content="dataArticolo" />
         <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
             <meta itemprop="name"  content="Burocraziafacile.it" />
+            <meta itemprop="logo" content="https://prismic-io.s3.amazonaws.com/burocraziafacile/6ee37555903fbb556179937998dc274d1c730b61_unnamed.png" />
         </span>
 
         <meta itemprop="author" content="Burocraziafacile.it" />
