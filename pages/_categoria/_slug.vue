@@ -1,5 +1,6 @@
 <template lang="html">
     <article class="content slug" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        <meta itemprop="mainEntityOfPage" :content="articoloAbsoluteUrl">
         <header class="testata">
             <h1 class="title is-2" itemprop="name headline" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
 
