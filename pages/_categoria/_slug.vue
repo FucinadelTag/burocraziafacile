@@ -14,7 +14,7 @@
             </div>
 
         </div>
-        <figure itemscope itemtype="https://schema.org/ImageObject">
+        <figure>
             <img itemprop="image"  v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" v-bind:title="immagine_principale.title" />
         </figure>
 
