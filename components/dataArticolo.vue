@@ -1,7 +1,10 @@
 <template lang="html">
     <div class="dataArticolo">
         <meta itemprop="datePublished" :content="dataArticolo" />
-        <meta itemprop="publisher" content="Burocraziafacile.it" />
+        <span itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+            <meta itemprop="name"  content="Burocraziafacile.it" />
+        </span>
+
         <meta itemprop="author" content="Burocraziafacile.it" />
         <span class="data"><time itemprop="dateModified">{{dataArticolo}}</time></span> |
         <span class="tag" itemprop="keywords">
