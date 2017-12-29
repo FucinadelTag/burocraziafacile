@@ -8,16 +8,16 @@
                 <div class="column">
                     <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
                 </div>
-                <div class="column">
-                    <img v-bind:src="paragrafo.primary.immagine.Quadrata.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+                <div class="column" itemscope itemtype="https://schema.org/ImageObject">
+                    <img itemprop="image"  v-bind:src="paragrafo.primary.immagine.Quadrata.url" v-bind:alt="paragrafo.primary.alt_immagine" />
                 </div>
             </div>
         </div>
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Sinistra'">
             <div class="columns">
-                <div class="column">
-                    <img v-bind:src="paragrafo.primary.immagine.Quadrata.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+                <div class="column" itemscope itemtype="https://schema.org/ImageObject">
+                    <img itemprop="image" v-bind:src="paragrafo.primary.immagine.Quadrata.url" v-bind:alt="paragrafo.primary.alt_immagine" />
                 </div>
                 <div class="column">
                     <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
@@ -26,7 +26,10 @@
         </div>
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Sopra'">
-            <img v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+            <figure itemscope itemtype="https://schema.org/ImageObject">
+                <img itemprop="image" v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+            </figure>
+
             <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
         </div>
 
@@ -37,7 +40,9 @@
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Sotto'">
             <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
-            <img v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+            <figure itemscope itemtype="https://schema.org/ImageObject">
+                <img itemprop="image" v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+            </figure>
         </div>
 
         <div class="has-text-centered" v-if="callToActionsParagrafo" v-for="action in callToActionsParagrafo" :key="action.id">

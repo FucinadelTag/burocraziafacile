@@ -1,7 +1,7 @@
 <template lang="html">
-    <article class="content slug">
+    <article class="content slug" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         <header class="testata">
-            <h1 class="title is-2" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
+            <h1 class="title is-2" itemprop="name headline" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"></h1>
 
         </header>
         <div class="columns barraShare">
@@ -14,10 +14,13 @@
             </div>
 
         </div>
-        <img v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" v-bind:title="immagine_principale.title" />
-        <section class="abstract section" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
+        <figure itemscope itemtype="https://schema.org/ImageObject">
+            <img itemprop="image"  v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" v-bind:title="immagine_principale.title" />
+        </figure>
 
-            <section class="section" v-for="(slice, key, index) in articolo.data.body" :key="articolo.id">
+        <section class="abstract section"  itemprop="description" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
+
+            <section itemprop="articleBody"  class="section" v-for="(slice, key, index) in articolo.data.body" :key="articolo.id">
 
                 <paragrafoArticolo v-if="slice.slice_type == 'paragrafo'"  v-bind:paragrafo="slice" v-bind:indice="key" />
 
