@@ -11,7 +11,7 @@ const getNews = async function (store, error) {
                 Prismic.Predicates.at('document.type', 'articolo'),
                 Prismic.Predicates.at('my.articolo.tipo', 'news')
             ],
-            { pageSize : 5, page : 1, orderings : '[my.articolo.first_publication_date desc]', fetchLinks: 'categoria.uid' }
+            { pageSize : 50, page : 1, orderings : '[my.articolo.first_publication_date desc]', fetchLinks: 'categoria.uid' }
         );
         return data
     } catch (e) {

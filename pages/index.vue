@@ -59,7 +59,7 @@ import _ from 'lodash'
 import dataArticolo from '~/components/dataArticolo.vue'
 
 export default {
-    middleware: 'getArticoliHome',
+    middleware: 'getNews',
     computed: {
         // a computed getter
         firstArticle: function () {
@@ -71,7 +71,7 @@ export default {
     },
     data: function () {
         return {
-            articoli: this.$store.getters['articoli/getArticoliHome'],
+            articoli: this.$store.getters['articoli/getNews'],
             PrismicDom: PrismicDom,
         }
     },

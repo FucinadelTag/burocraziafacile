@@ -1,14 +1,19 @@
 <template lang="html">
 
         <div class="destra">
-            <div class="titolo">Novità</div>
+            <div class="titolo">Le nostre guide</div>
             <article class="" v-for="articolo in articoli" v-bind:articolo="articolo">
                 <a v-bind:href="'/' + articolo.data.categoria.uid + '/' + articolo.uid">
                     <div>
                         <div class="title is-6" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"/>
                         <p v-html="PrismicDom.RichText.asText(articolo.data.abstract)" />
+                        <p class="has-text-right">
+                            <span class="button is-light is-small">Leggi la guida</span>
+                        </p>
                     </div>
                 </a>
+
+
                 <hr>
             </article>
         </div>
@@ -24,7 +29,7 @@ import PrismicDom from 'prismic-dom'
 export default {
     data: function () {
         return {
-            articoli: this.$store.getters['articoli/getNews'],
+            articoli: this.$store.getters['articoli/getArticoliHome'],
             PrismicDom: PrismicDom
         }
     }

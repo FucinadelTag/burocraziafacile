@@ -41,7 +41,7 @@ module.exports = {
 
     ],
     router: {
-        middleware: ['ActiveMenu', 'getSettings', 'getNews']
+        middleware: ['ActiveMenu', 'getSettings', 'getArticoliHome']
     },
     build: {
         postcss: {

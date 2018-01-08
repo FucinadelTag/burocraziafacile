@@ -25,7 +25,7 @@ export default {
     computed: {
         // a computed getter
         dataArticolo: function () {
-            return Moment(this.articolo.last_publication_date).format('DD MMMM YYYY');
+            return Moment(this.articolo.first_publication_date).format('DD MMMM YYYY');
         }
     },
 }
