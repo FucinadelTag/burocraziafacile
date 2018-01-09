@@ -23,5 +23,8 @@ export default ({ app }) => {
     */
     ga('set', 'page', to.fullPath)
     ga('send', 'pageview')
+
+    setTimeout("ga('send','event','adjusted bounce rate','10 seconds')",10000);
+
   })
 }
