@@ -1,6 +1,6 @@
 <template lang="html">
     <div class="paragrafoArticolo">
-        <h2 class="subtitle is-3" v-if="paragrafo.primary.titolo !=''" v-html="PrismicDom.RichText.asText(paragrafo.primary.titolo)"/>
+        <h2 v-bind:id="getSlug" class="subtitle is-3" v-if="paragrafo.primary.titolo !=''" v-html="PrismicDom.RichText.asText(paragrafo.primary.titolo)"/>
 
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Destra'">
@@ -55,6 +55,7 @@
 
 <script>
 import PrismicDom from 'prismic-dom'
+import slugify from 'slugify'
 import buttonCallToAction from '~/components/buttonCallToAction.vue'
 
 export default {
@@ -74,9 +75,20 @@ export default {
             } else {
                 return false
             }
+        },
+        getSlug: function () {
 
+            var slug = this.indice;
 
+            if (this.paragrafo.primary.titolo !='') {
+                 slug = slugify(PrismicDom.RichText.asText(this.paragrafo.primary.titolo), {
+                    replacement: '-',
+                    remove: /[$*_+~.()'"!\-:@?]/g,
+                    lower: true
+                })
+            }
 
+            return slug;
         }
     },
     components: {
