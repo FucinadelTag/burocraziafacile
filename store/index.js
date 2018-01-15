@@ -35,7 +35,7 @@ const getCategorie = function (){
             isActive: ''
         },
         {
-            name: 'Azienza',
+            name: 'Azienda',
             link: 'azienda',
             isActive: ''
         },
