@@ -55,33 +55,5 @@ export default {
 
 <style lang="scss">
 
-.callToAction {
-    padding: 1rem;
-
-    .descrizione {
-        font-style: italic;
-        color: $orangePratiche;
-        font-weight: bold
-    }
-    .button {
-        background-color: #ea6728;
-        color: #ffffff;
-        font-size: 110%;
-        font-weight: bold;
-        text-transform: uppercase;
-
-        &:hover {
-            color: #ffffff;
-            background-color: #f87a13;
-        }
-
-        &:visited {
-            color: #ffffff;
-            background-color: #f87a13;
-        }
-    }
-
-}
-
 
 </style>

@@ -13,3 +13,31 @@ $button-color: #ea6728;
 p {
     line-height: 1.6em;
 }
+
+.callToAction {
+    padding: 1rem;
+
+    .descrizione {
+        font-style: italic;
+        color: $orangePratiche;
+        font-weight: bold
+    }
+    .button {
+        background-color: #ea6728;
+        color: #ffffff;
+        font-size: 110%;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #ffffff;
+            background-color: #f87a13;
+        }
+
+        &:visited {
+            color: #ffffff;
+            background-color: #f87a13;
+        }
+    }
+
+}

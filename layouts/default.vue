@@ -14,6 +14,7 @@
                     </div>
                 </div>
             </div>
+            <bannerFooter/>
         </div>
         <myFooter/>
     </div>
@@ -25,6 +26,7 @@
     import MyMenu from '~/components/MyMenu.vue'
     import listNewsDestra from '~/components/listNewsDestra.vue'
     import formNewsletter from '~/components/formNewsletter.vue'
+    import bannerFooter from '~/components/bannerFooter.vue'
     import myFooter from '~/components/footer.vue'
 
     export default {
@@ -32,6 +34,7 @@
             MyMenu,
             listNewsDestra,
             formNewsletter,
+            bannerFooter,
             myFooter
 
         },

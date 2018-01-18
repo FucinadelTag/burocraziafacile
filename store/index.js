@@ -87,6 +87,14 @@ export const getters = {
 
         return logoUrl;
     },
+    getLogoPraticheUrl: state => {
+
+        let settings = state.settings;
+
+        let logoUrl = settings.data.logo_pratiche.url
+
+        return logoUrl;
+    },
     getTitle: state => {
 
         let settings = state.settings;
