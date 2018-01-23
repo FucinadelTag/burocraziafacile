@@ -16,6 +16,10 @@
                     <p>
                         La sezione novità ti consente di rimanere aggiornato sulle ultime notizie, incentivi e scadenze della burocrazia.
                     </p>
+                    <br>
+                    <p class="title is-5">
+                        <a href="https://mxbfqtuan8.execute-api.us-east-1.amazonaws.com/latest/rss/" target="_blank"><i class="fa fa-rss-square" aria-hidden="true"></i> Feed Rss</a>
+                    </p>
                 </div>
                 <div class="column">
                     <p class="title is-4">
@@ -61,9 +65,9 @@
                         </p>
 
                      </p>
-                     <p class="is-size-7">
+                    <p class="is-size-7">
                         <a href="/note-legali">Note legali</a>
-                     </p>
+                    </p>
                 </div>
 
             </div>

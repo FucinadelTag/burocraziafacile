@@ -38,6 +38,7 @@ module.exports = {
         { src: '~plugins/facebook.js', ssr: false },
         { src: '~plugins/vue-cookie-law.js', ssr: false },
         { src: '~plugins/iubenda.js', ssr: false },
+        { src: '~plugins/iconFont.js', ssr: false },
 
     ],
     router: {
