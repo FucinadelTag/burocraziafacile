@@ -39,6 +39,11 @@ const getCategorie = function (){
             link: 'azienda',
             isActive: ''
         },
+        {
+            name: 'Famiglia',
+            link: 'famiglia',
+            isActive: ''
+        },
     ]
 }
 
