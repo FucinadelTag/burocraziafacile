@@ -8,7 +8,7 @@ module.exports = {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            { rel: 'alternate', type: 'application/rss+xml', href: 'http://a127962.hostedsitemap.com/4029146/feed_rss.xml' },
+            { rel: 'alternate', type: 'application/rss+xml', href: 'https://mxbfqtuan8.execute-api.us-east-1.amazonaws.com/latest/rss/' },
 
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700' }
         ]
