@@ -8,6 +8,7 @@
                         <nuxt/>
                     </div>
                     <div class="column">
+                        <bannerDestra/>
                         <formNewsletter/>
                         <listNewsDestra/>
 
@@ -24,6 +25,7 @@
 
 <script charset="utf-8">
     import MyMenu from '~/components/MyMenu.vue'
+    import bannerDestra from '~/components/bannerDestra.vue'
     import listNewsDestra from '~/components/listNewsDestra.vue'
     import formNewsletter from '~/components/formNewsletter.vue'
     import bannerFooter from '~/components/bannerFooter.vue'
@@ -35,6 +37,7 @@
             listNewsDestra,
             formNewsletter,
             bannerFooter,
+            bannerDestra,
             myFooter
 
         },
