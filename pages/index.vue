@@ -83,7 +83,7 @@ export default {
 
 <style lang="scss">
 .home {
-    padding: 1rem;
+    padding: 0rem 1rem 1rem 1rem;
     a {
         color: inherit;
     }
