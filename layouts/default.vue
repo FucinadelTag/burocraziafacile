@@ -76,29 +76,26 @@
         .footer {
             margin-top: 5rem;
             padding-bottom: 3rem;
-            .Cookie {
-                font-size: 0.8rem;
-                background-color: #000000;
-                color: #ffffff;
-                margin: 0rem;
-                > * {
-                    margin: 0;
-                    align-self: center;
-                }
-            }
-            .Cookie--base {
-                padding-left: 0.1rem;
-                padding-top: 0.1rem;
-                padding-bottom: 0.1rem;
-                margin: 0rem;
-            },
-            .Cookie__button {
-                padding-top: 0rem;
-                padding-bottom: 0rem;
-            }
+            // .Cookie {
+            //     font-size: 0.8rem;
+            //     background-color: #000000;
+            //     color: #ffffff;
+            //     margin: 0rem;
+            //     > * {
+            //         margin: 0;
+            //         align-self: center;
+            //     }
+            // }
+            // .Cookie--base {
+            //     padding-left: 0.1rem;
+            //     padding-top: 0.1rem;
+            //     padding-bottom: 0.1rem;
+            //     margin: 0rem;
+            // },
+            // .Cookie__button {
+            //     padding-top: 0rem;
+            //     padding-bottom: 0rem;
+            // }
         }
-
-        //border-right: 1px solid;
-        //border-right-color: $grey-ligh;
     }
 </style>
