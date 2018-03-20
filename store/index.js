@@ -4,11 +4,11 @@ import PrismicDom from 'prismic-dom'
 
 const getCategorie = function (){
     return [
-        // {
-        //     name: 'Lavoro',
-        //     link: 'lavoro',
-        //     isActive: ''
-        // },
+        {
+            name: 'Lavoro',
+            link: 'lavoro',
+            isActive: ''
+        },
         // {
         //     name: 'Impresa',
         //     link: 'impresa',
