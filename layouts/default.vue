@@ -18,6 +18,7 @@
             <bannerFooter/>
         </div>
         <myFooter/>
+        <script src="//rum-static.pingdom.net/pa-5afb5f9129ccc50006000126.js" async></script>
     </div>
 
 
