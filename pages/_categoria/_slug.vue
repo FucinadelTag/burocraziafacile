@@ -29,6 +29,18 @@
 
             </section>
 
+            <section class="section articoliSimili">
+                <div class="listIntro">
+                        <h1 class="subtitle is-5">Altri articoli che potrebbero interessarti:</h1>
+                </div>
+                <div class="columns is-multiline">
+                    <div v-for="articolo in articoliSimili" class="column is-half" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+                        <easyListArticoli v-bind:articolo = "articolo" />
+                    </div>
+
+                </div>
+            </section>
+
             <section class="section comments">
                 <hr>
                 <vue-disqus shortname="https-www-burocraziafacile-it" :identifier="articolo.uid" :url="articoloAbsoluteUrl"></vue-disqus>
@@ -66,6 +78,7 @@ import PrismicDom from 'prismic-dom'
 import dataArticolo from '~/components/dataArticolo.vue'
 import paragrafoArticolo from '~/components/paragrafoArticolo.vue'
 import callToActionArticolo from '~/components/callToActionArticolo.vue'
+import easyListArticoli from '~/components/easyListArticoli.vue'
 
 import VueDisqus from 'vue-disqus/VueDisqus.vue'
 
@@ -74,6 +87,7 @@ export default {
     data: function () {
         return {
             articolo: this.$store.getters['articoli/getArticolo'],
+            articoliSimili: this.$store.getters['articoli/getArticoliSimili'],
             PrismicDom: PrismicDom,
         }
 
@@ -98,6 +112,7 @@ export default {
         paragrafoArticolo,
         callToActionArticolo,
         VueDisqus,
+        easyListArticoli
     },
     head () {
         return {
@@ -139,14 +154,23 @@ export default {
 
     }
 
+    .listIntro {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-size: 90%;
+    }
+
     .barraShare {
         margin-bottom: 1.2rem;
     }
 
-    .title {
-        font-weight: 700;
-        font-size: 2.6rem;
+    .testata {
+        .title {
+            font-weight: 700;
+            font-size: 2.6rem;
+        }
     }
+
 
     .abstract {
         font-style: italic;

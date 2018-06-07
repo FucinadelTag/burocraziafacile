@@ -24,29 +24,8 @@
                 </a>
             </div>
             <div class="columns is-multiline">
-                <div v-for="articolo in altriArticoli" :key="articolo.id" class="column is-half" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-                    <a itemprop="url" v-bind:href="'/' + articolo.data.categoria.uid + '/' + articolo.uid">
-                        <article class="boxArticolo">
-                            <div class="columns">
-                                <!-- <div class="column">
-                                    <h1 class="title is-6" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"/>
-                                    <a class="linkMore" v-bind:href="'/' + articolo.data.categoria.uid + '/' + articolo.uid">Leggi Tutto</a>
-                                </div> -->
-                                <div class="column">
-                                    <figure class="" itemscope itemtype="https://schema.org/ImageObject">
-                                        <img itemprop="image" v-bind:src="articolo.data.immagine_principale[0].immagine.url" v-bind:alt="articolo.data.immagine_principale[0].alt" v-bind:title="articolo.data.immagine_principale[0].title" />
-                                    </figure>
-                                    <!-- <dataArticolo v-bind:articolo="articolo"/> -->
-                                </div>
-                            </div>
-                            <div class="columns">
-                                <div class="column">
-                                    <h2 itemprop="title headline" class="title is-4" v-html="PrismicDom.RichText.asText(articolo.data.titolo)"/>
-                                </div>
-                            </div>
-
-                        </article>
-                    </a>
+                <div v-for="articolo in altriArticoli" class="column is-half" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+                    <easyListArticoli v-bind:articolo = "articolo"  v-bind:key = "articolo.id" />
                 </div>
             </div>
     </div>
@@ -57,6 +36,7 @@
 import PrismicDom from 'prismic-dom'
 import _ from 'lodash'
 import dataArticolo from '~/components/dataArticolo.vue'
+import easyListArticoli from '~/components/easyListArticoli.vue'
 
 export default {
     middleware: 'getNews',
@@ -77,6 +57,7 @@ export default {
     },
     components: {
         dataArticolo,
+        easyListArticoli
     },
 }
 </script>
@@ -92,13 +73,6 @@ export default {
         border-top-width: .2rem;
         border-top-style: solid;
     }
-    .boxArticolo {
-        padding: 1rem;
-        border-top-color: $orangePratiche;
-        border-top-width: .2rem;
-        border-top-style: solid;
-    }
-
     .linkMore {
         font-style: italic;
     }

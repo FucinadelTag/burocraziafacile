@@ -3,6 +3,7 @@ export const state = () => ({
   list_news: [],
   list_search: [],
   list_home: [],
+  list_similar: [],
   list_callToActions: [],
   query: '',
   articolo: false
@@ -30,6 +31,9 @@ export const mutations = {
     SET_QUERY_SEARCH (state, query) {
         state.query = query;
     },
+    SET_SIMILAR (state, list) {
+        state.list_similar = list;
+    },
 }
 
 export const getters = {
@@ -41,6 +45,10 @@ export const getters = {
     },
     getArticolo: state => {
         return state.articolo;
+    },
+    getArticoliSimili: state => {
+        console.log(state.list_similar);
+        return state.list_similar;
     },
     getNews: state => {
         return state.list_news;

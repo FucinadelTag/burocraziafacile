@@ -15,6 +15,25 @@ const getArticolo = async function (uid) {
 }
 
 
+const getArticoliSimili = async function (id) {
+    let api = await getApi();
+
+    try {
+        const data = await api.query(
+            [
+                Prismic.Predicates.at('document.type', 'articolo'),
+                Prismic.Predicates.similar(id, 10)
+            ],
+            { pageSize : 4, page : 1, fetchLinks: 'categoria.uid' }
+        );
+        return data
+    } catch (e) {
+        console.log(e);
+        error({ message: 'Articoli Search not found', statusCode: 404 })
+    }
+}
+
+
 const getCallToAction = async function (item) {
 
         if (item.call_to_action.id){
@@ -77,6 +96,11 @@ export default async function ({ store, route, error }) {
     let articolo  = await getArticolo (uid);
     let callToActions = await getParagrafiMap (articolo);
     if (typeof articolo != 'undefined'){
+
+        let articoliSimili = await getArticoliSimili (articolo.id);
+
+        //console.log(articoliSimili);
+        store.commit('articoli/SET_SIMILAR', articoliSimili.results)
         store.commit('articoli/SET_ARTICOLO', articolo)
         store.commit('articoli/SET_LIST_CALLTOACTION', callToActions)
     }
