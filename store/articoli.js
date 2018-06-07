@@ -1,8 +1,10 @@
 export const state = () => ({
   list: [],
   list_news: [],
+  list_search: [],
   list_home: [],
   list_callToActions: [],
+  query: '',
   articolo: false
 })
 
@@ -22,11 +24,20 @@ export const mutations = {
     SET_LIST_CALLTOACTION (state, list) {
         state.list_callToActions = list;
     },
+    SET_LIST_SEARCH (state, list) {
+        state.list_search = list;
+    },
+    SET_QUERY_SEARCH (state, query) {
+        state.query = query;
+    },
 }
 
 export const getters = {
     getArticoli: state => {
         return state.list;
+    },
+    getArticoliSearch: state => {
+        return state.list_search;
     },
     getArticolo: state => {
         return state.articolo;
@@ -39,5 +50,8 @@ export const getters = {
     },
     getArticoliCallToActions: (state) => {
         return state.list_callToActions;
-    }
+    },
+    getQuerySearch: state => {
+        return state.query;
+    },
 }

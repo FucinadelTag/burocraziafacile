@@ -28,6 +28,9 @@
                         <div class="navbar-start">
                             <a v-for="item in menuItems" class="navbar-item" v-bind:href="'/' + item.link" v-bind:class="item.isActive">{{item.name}}</a>
                         </div>
+                        <div  class="navbar-item">
+                            <searchForm />
+                        </div>
                     </div>
                 </nav>
                 <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -49,14 +52,18 @@
 
 <script>
 import _ from 'lodash'
+import searchForm from '~/components/searchForm.vue'
 
 export default {
     //props: ['isActive'],
     data: function () {
         return {
             menuItems: this.$store.getters.getCategorie,
-            logo: this.$store.getters.getLogoUrl
+            logo: this.$store.getters.getLogoUrl,
         }
+    },
+    components: {
+        searchForm,
     }
 }
 </script>
