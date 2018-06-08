@@ -47,7 +47,7 @@ export const getters = {
         return state.articolo;
     },
     getArticoliSimili: state => {
-        console.log(state.list_similar);
+        //console.log(state.list_similar);
         return state.list_similar;
     },
     getNews: state => {

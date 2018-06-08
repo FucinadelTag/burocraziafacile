@@ -82,7 +82,7 @@ const getParagrafi = async function (articolo) {
 
         let paragrafo = await manageParagrafo (slice, keyParagrafo);
 
-        console.log(paragrafo);
+        //console.log(paragrafo);
 
         return paragrafo;
     });
