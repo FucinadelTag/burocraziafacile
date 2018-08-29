@@ -19,6 +19,11 @@
         </div>
         <myFooter/>
         <script src="//rum-static.pingdom.net/pa-5afb5f9129ccc50006000126.js" async></script>
+        <script type="text/javascript">
+            var subscribersSiteId = '93023d97-e7f7-4816-babb-9d7ec25913e6';
+        </script>
+        <script type="text/javascript" src="https://cdn.subscribers.com/assets/subscribers.js"></script>
+
     </div>
 
 
