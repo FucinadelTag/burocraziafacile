@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import {linkWithTag} from '~/tools/taggedLink.js'
+
 export default {
     data: function () {
         return {
@@ -29,9 +31,13 @@ export default {
     computed: {
         linkWithTag: function () {
 
-            let taggedLink = 'https://www.pratiche.it/?utm_source=burocraziafacile&utm_medium=banner&utm_campaign=footer';
+            let linkUrl = 'https://www.pratiche.it';
+            let utmQuery = this.$cookies.get('utmQuery');
+
+            let taggedLink = linkWithTag (linkUrl, utmQuery, 'banner', 'footer');
 
             return taggedLink;
+
         },
     },
     methods: {

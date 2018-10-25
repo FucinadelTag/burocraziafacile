@@ -18,7 +18,8 @@ module.exports = {
         [
             'nuxt-sass-resources-loader',
             './assets/scss/variables.scss',
-        ]
+        ],
+        ['cookie-universal-nuxt']
     ],
     css: [
         {src: '~/assets/scss/main.scss', lang: 'scss'}
@@ -42,7 +43,7 @@ module.exports = {
 
     ],
     router: {
-        middleware: ['ActiveMenu', 'getSettings', 'getArticoliHome']
+        middleware: ['ActiveMenu', 'getSettings', 'getArticoliHome', 'setCookiesCampaign']
     },
     build: {
         postcss: {

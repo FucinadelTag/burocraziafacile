@@ -10,6 +10,9 @@
 <script>
 import PrismicDom from 'prismic-dom'
 import {getDocumentById} from '~/tools/prismic.js'
+import {linkWithTag} from '~/tools/taggedLink.js'
+
+import _ from 'lodash'
 
 export default {
     props: ['callToAction'],
@@ -27,8 +30,8 @@ export default {
         linkWithTag: function () {
             let linkUrl = PrismicDom.Link.url(this.callToAction.data.link);
             let uid = this.articolo.uid;
-
-            let taggedLink = linkUrl + '/?utm_source=burocraziafacile&utm_medium=articolo&utm_campaign=' + uid;
+            let utmQuery = this.$cookies.get('utmQuery');
+            let taggedLink = linkWithTag (linkUrl, utmQuery, 'articolo', uid);
 
             return taggedLink;
         },
