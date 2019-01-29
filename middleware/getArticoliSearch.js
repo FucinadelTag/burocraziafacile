@@ -11,7 +11,7 @@ const getArticoliSearch = async function (store, queryString, error) {
                 Prismic.Predicates.at('document.type', 'articolo'),
                 Prismic.Predicates.fulltext('document', queryString)
             ],
-            { pageSize : 50, page : 1, orderings : '[document.first_publication_date desc]', fetchLinks: 'categoria.uid' }
+            { pageSize : 50, page : 1, orderings : '[document.last_publication_date desc]', fetchLinks: 'categoria.uid' }
         );
         return data
     } catch (e) {

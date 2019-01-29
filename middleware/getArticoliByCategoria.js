@@ -29,7 +29,7 @@ const getPrismicDataByCategoriaId = async function (store, error) {
                 Prismic.Predicates.at('document.type', 'articolo'),
                 Prismic.Predicates.at('my.articolo.categoria', categoria.id)
             ],
-            { pageSize : 20, page : 1, orderings : '[document.first_publication_date desc]', fetchLinks: 'categoria.uid' }
+            { pageSize : 20, page : 1, orderings : '[document.last_publication_date desc]', fetchLinks: 'categoria.uid' }
         );
         return data
     } catch (e) {
