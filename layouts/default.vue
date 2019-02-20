@@ -1,31 +1,29 @@
 <template>
-    <div class="default">
-        <div class="container">
-            <div class="content">
-                <MyMenu/>
-                <div class="columns padding">
-                    <div class="column is-two-thirds">
-                        <nuxt/>
+    <div>
+        <myMenu/>
+            <section class="section">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column is-two-thirds">
+                            <nuxt/>
+                        </div>
+                        <div class="column">
+                            <bannerDestra/>
+                            <formNewsletter/>
+                            <listNewsDestra/>
+                        </div>
                     </div>
-                    <div class="column">
-                        <bannerDestra/>
-                        <formNewsletter/>
-                        <listNewsDestra/>
 
-                    </div>
                 </div>
-            </div>
-            <bannerFooter/>
-        </div>
+                <bannerFooter/>
+            </section>
         <myFooter/>
         <script src="//rum-static.pingdom.net/pa-5afb5f9129ccc50006000126.js" async></script>
         <script type="text/javascript">
             var subscribersSiteId = '93023d97-e7f7-4816-babb-9d7ec25913e6';
         </script>
         <script type="text/javascript" src="https://cdn.subscribers.com/assets/subscribers.js"></script>
-
     </div>
-
 
 </template>
 
@@ -82,26 +80,6 @@
         .footer {
             margin-top: 5rem;
             padding-bottom: 3rem;
-            // .Cookie {
-            //     font-size: 0.8rem;
-            //     background-color: #000000;
-            //     color: #ffffff;
-            //     margin: 0rem;
-            //     > * {
-            //         margin: 0;
-            //         align-self: center;
-            //     }
-            // }
-            // .Cookie--base {
-            //     padding-left: 0.1rem;
-            //     padding-top: 0.1rem;
-            //     padding-bottom: 0.1rem;
-            //     margin: 0rem;
-            // },
-            // .Cookie__button {
-            //     padding-top: 0rem;
-            //     padding-bottom: 0rem;
-            // }
         }
     }
 </style>
