@@ -15,12 +15,14 @@ module.exports = {
     },
     loading: { color: '#3B8070' },
     modules: [
-        [
-            'nuxt-sass-resources-loader',
-            './assets/scss/variables.scss',
-        ],
-        ['cookie-universal-nuxt']
+        '@nuxtjs/style-resources',
+        'cookie-universal-nuxt'
     ],
+    styleResources: {
+        scss: [
+            './assets/scss/variables.scss',
+        ]
+    },
     css: [
         {src: '~/assets/scss/main.scss', lang: 'scss'}
     ],

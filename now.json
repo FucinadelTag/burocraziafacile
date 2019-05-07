@@ -1,0 +1,24 @@
+{
+  "name": "burocraziafacile",
+  "version": 2,
+  "alias": "www.burocraziafacile.it",
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/now-builder",
+      "config": {
+        "serverFiles": [
+          "middleware/**",
+          "plugins/**",
+          "tools/**",
+          "api/**",
+          "package.json"
+        ]
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/_nuxt/.+", "headers": { "cache-control": "s-maxage=31536000" } },
+    { "src": "^/(.*)", "dest": "/" }
+  ]
+}

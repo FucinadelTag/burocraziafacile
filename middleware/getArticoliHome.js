@@ -9,7 +9,7 @@ const getArticoliHome = async function (store, error) {
         const data = await api.query(
             [
                 Prismic.Predicates.at('document.type', 'articolo'),
-                Prismic.Predicates.at('my.articolo.tipo', 'articolo')
+                Prismic.Predicates.at('my.articolo.tipo', 'articolo'),
             ],
             { pageSize : 20, page : 1, orderings : '[document.last_publication_date desc]', fetchLinks: 'categoria.uid' }
         );
