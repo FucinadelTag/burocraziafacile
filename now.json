@@ -12,7 +12,9 @@
           "plugins/**",
           "tools/**",
           "api/**",
-          "package.json"
+          "package.json",
+          "static/favicon.ico",
+          "static/robots.txt"
         ]
       }
     }
