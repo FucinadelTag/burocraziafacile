@@ -1,6 +1,9 @@
 {
   "name": "burocraziafacile",
   "version": "1.0.0",
+  "engines": {
+      "node": "14.x"
+    },
   "description": "Nuxt.js project",
   "author": "Lorenzo Caldara <lorenzo@dinoweb.net>",
   "private": true,
