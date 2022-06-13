@@ -57,11 +57,10 @@
                     </p>
                     <br>
                     <p class="has-text-centered">
-                        <strong>Burocraziafacile.it</strong><br>è un progetto di <i>Script Media Group Ltd</i>
+                        <strong>Burocraziafacile.it</strong><br>è un progetto di <i>Nexxy SA</i>
                         <p>
-                            <br> 90 Leinster Road
-                            <br>Rathmines Dublin 6
-                            <br>Vat IE​3458266BH
+                            <br> Corso San Gottardo 46/E
+                            <br>6830 Chiasso - Switzerland
                         </p>
 
                      </p>
