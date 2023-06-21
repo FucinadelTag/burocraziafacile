@@ -10,7 +10,7 @@
             <div class="columns">
                 <div class="column is-two-quarters">
                     <figure itemscope itemtype="https://schema.org/ImageObject">
-                        <img itemprop="image" v-bind:src="articolo.data.immagine_principale[0].immagine.url" v-bind:title="articolo.data.immagine_principale[0].alt" v-bind:alt="articolo.data.immagine_principale[0].alt" />
+                        <img itemprop="image" v-bind:src="immagine_principale.url" v-bind:title="immagine_principale.alt" v-bind:alt="immagine_principale.alt" />
                     </figure>
                 </div>
                 <div itemprop="description"  class="column is-two-quarters" v-html="PrismicDom.RichText.asHtml(articolo.data.abstract)" />
@@ -26,6 +26,8 @@
 <script>
 import dataArticolo from '~/components/dataArticolo.vue'
 import PrismicDom from 'prismic-dom'
+import {getSobstituteImage} from '~/tools/images.js'
+
 
 export default {
     props: ['articolo'],
@@ -35,7 +37,20 @@ export default {
             let categoria = this.articolo.data.categoria.uid;
 
             return (categoria + "/" + this.articolo.uid);
-        }
+        },
+		immagine_principale: function () {
+			let immagineData = {
+				url: this.articolo.data.immagine_principale[0].immagine.url,
+				alt: this.articolo.data.immagine_principale[0].alt,
+				title: this.articolo.data.immagine_principale[0].alt,
+			}
+			
+			
+			immagineData.url = getSobstituteImage (this.articolo);
+			
+			
+			return immagineData;
+		},
     },
     data: function () {
         return {

@@ -41,10 +41,10 @@
                 </div>
             </section>
 
-            <section class="section comments">
+<!--            <section class="section comments">
                 <hr>
                 <vue-disqus shortname="https-www-burocraziafacile-it" :identifier="articolo.uid" :url="articoloAbsoluteUrl"></vue-disqus>
-            </section>
+            </section>-->
 
             <!-- <hr>
             <section id="disqus_thread"></section>
@@ -79,6 +79,7 @@ import dataArticolo from '~/components/dataArticolo.vue'
 import paragrafoArticolo from '~/components/paragrafoArticolo.vue'
 import callToActionArticolo from '~/components/callToActionArticolo.vue'
 import easyListArticoli from '~/components/easyListArticoli.vue'
+import {getSobstituteImage} from '~/tools/images.js'
 
 import VueDisqus from 'vue-disqus/VueDisqus.vue'
 
@@ -100,6 +101,11 @@ export default {
                 alt: this.articolo.data.immagine_principale[0].alt,
                 title: this.articolo.data.immagine_principale[0].alt,
             }
+			
+			
+			immagineData.url = getSobstituteImage (this.articolo);
+			
+			
             return immagineData;
         },
         articoloAbsoluteUrl: function () {

@@ -16,7 +16,7 @@
                             </div>
                             <div class="column">
                                 <figure class="image">
-                                  <img itemprop="image" v-bind:src="firstArticle.data.immagine_principale[0].immagine.url" v-bind:alt="firstArticle.data.immagine_principale[0].alt" v-bind:title="firstArticle.data.immagine_principale[0].title" />
+                                  <img itemprop="image" v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" v-bind:title="immagine_principale.title" />
                                 </figure>
                             </div>
                         </div>
@@ -37,6 +37,7 @@ import PrismicDom from 'prismic-dom'
 import _ from 'lodash'
 import dataArticolo from '~/components/dataArticolo.vue'
 import easyListArticoli from '~/components/easyListArticoli.vue'
+import {getSobstituteImage} from '~/tools/images.js'
 
 export default {
     middleware: 'getNews',
@@ -47,7 +48,20 @@ export default {
         },
         altriArticoli: function () {
             return _.drop (this.articoli, 1);
-        }
+        },
+		immagine_principale: function () {
+			let immagineData = {
+				url: this.articoli[0].data.immagine_principale[0].immagine.url,
+				alt: this.articoli[0].data.immagine_principale[0].alt,
+				title: this.articoli[0].data.immagine_principale[0].alt,
+			}
+			
+			
+			immagineData.url = getSobstituteImage (this.articoli[0]);
+			
+			
+			return immagineData;
+		},
     },
     data: function () {
         return {

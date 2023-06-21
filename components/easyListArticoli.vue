@@ -8,7 +8,7 @@
                 </div> -->
                 <div class="column">
                     <figure class="" itemscope itemtype="https://schema.org/ImageObject">
-                        <img itemprop="image" v-bind:src="articolo.data.immagine_principale[0].immagine.url" v-bind:alt="articolo.data.immagine_principale[0].alt" v-bind:title="articolo.data.immagine_principale[0].title" />
+                        <img itemprop="image" v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" v-bind:title="immagine_principale.title" />
                     </figure>
                     <!-- <dataArticolo v-bind:articolo="articolo"/> -->
                 </div>
@@ -26,6 +26,7 @@
 
 <script>
 import PrismicDom from 'prismic-dom'
+import {getSobstituteImage} from '~/tools/images.js'
 
 export default {
     props: ['articolo'],
@@ -35,6 +36,22 @@ export default {
         }
 
     },
+	computed: {
+		// a computed getter
+		immagine_principale: function () {
+			let immagineData = {
+				url: this.articolo.data.immagine_principale[0].immagine.url,
+				alt: this.articolo.data.immagine_principale[0].alt,
+				title: this.articolo.data.immagine_principale[0].alt,
+			}
+			
+			
+			immagineData.url = getSobstituteImage (this.articolo);
+			
+			
+			return immagineData;
+		},
+	},
 }
 </script>
 
