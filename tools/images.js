@@ -41,9 +41,9 @@ const getSobstituteImage = (content) => {
 		
 		let imagePath = '/images/' + categoria + '/' + imageName;
 		
-		//immagineSostitutiva = 'https://img.gs/wvftzjtfrz/1000x500,crop=auto/https://www.burocraziafacile.it/' + imagePath;
+		immagineSostitutiva = 'https://img.gs/wvftzjtfrz/1000x500,crop=auto/https://www.burocraziafacile.it/' + imagePath;
 		
-		immagineSostitutiva = imagePath;
+		//immagineSostitutiva = imagePath;
 			
 	}
 	
