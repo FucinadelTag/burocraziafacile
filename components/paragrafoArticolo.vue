@@ -9,7 +9,7 @@
                     <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
                 </div>
                 <div class="column" itemscope itemtype="https://schema.org/ImageObject">
-                    <img itemprop="image"  v-bind:src="paragrafo.primary.immagine.Quadrata.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+					<img itemprop="image" v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" />
                 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@
         <div v-if="paragrafo.primary.posizione_immagine == 'Sinistra'">
             <div class="columns">
                 <div class="column" itemscope itemtype="https://schema.org/ImageObject">
-                    <img itemprop="image" v-bind:src="paragrafo.primary.immagine.Quadrata.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+					<img itemprop="image" v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" />
                 </div>
                 <div class="column">
                     <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
@@ -27,7 +27,7 @@
 
         <div v-if="paragrafo.primary.posizione_immagine == 'Sopra'">
             <figure itemscope itemtype="https://schema.org/ImageObject">
-                <img itemprop="image" v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+                <img itemprop="image" v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" />
             </figure>
 
             <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
@@ -41,7 +41,7 @@
         <div v-if="paragrafo.primary.posizione_immagine == 'Sotto'">
             <div v-html="PrismicDom.RichText.asHtml(paragrafo.primary.testo)"/>
             <figure itemscope itemtype="https://schema.org/ImageObject">
-                <img itemprop="image" v-bind:src="paragrafo.primary.immagine.url" v-bind:alt="paragrafo.primary.alt_immagine" />
+				<img itemprop="image" v-bind:src="immagine_principale.url" v-bind:alt="immagine_principale.alt" />
             </figure>
         </div>
 
@@ -57,9 +57,11 @@
 import PrismicDom from 'prismic-dom'
 import slugify from 'slugify'
 import buttonCallToAction from '~/components/buttonCallToAction.vue'
+import {getSobstituteImage} from '~/tools/images.js'
+
 
 export default {
-    props: ['paragrafo', 'indice'],
+    props: ['paragrafo', 'indice', 'articolo'],
     data: function () {
         return {
             PrismicDom: PrismicDom,
@@ -68,6 +70,19 @@ export default {
     },
     computed: {
         // a computed getter
+		immagine_principale: function () {
+			let immagineData = {
+				url: this.paragrafo.primary.immagine.url,
+				alt: this.paragrafo.primary.alt_immagine,
+				title: this.paragrafo.primary.alt_immagine,
+			}
+			
+			
+			immagineData.url = getSobstituteImage (this.articolo, this.paragrafo);
+			
+			
+			return immagineData;
+		},
         callToActionsParagrafo: function () {
             let callToActionsArray = this.callToActions[this.indice];
             if (callToActionsArray[0] !== null){

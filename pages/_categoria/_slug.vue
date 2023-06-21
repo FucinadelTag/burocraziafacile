@@ -23,7 +23,7 @@
 
             <section itemprop="articleBody"  class="section" v-for="(slice, key, index) in articolo.data.body" :key="articolo.id">
 
-                <paragrafoArticolo v-if="slice.slice_type == 'paragrafo'"  v-bind:paragrafo="slice" v-bind:indice="key" />
+                <paragrafoArticolo v-if="slice.slice_type == 'paragrafo'"  v-bind:paragrafo="slice" v-bind:articolo="articolo" v-bind:indice="key" />
 
                 <callToActionArticolo v-if="slice.slice_type == 'riepilogo_call_to_action'"  v-bind:paragrafo="slice"/>
 

@@ -24,9 +24,13 @@ const getRandomImage = () => {
 	return imageName;
 };
 
-const getSobstituteImage = (content) => {
+const getSobstituteImage = (content, paragrafo = false) => {
 	
 	let immagineSostitutiva = content.data.immagine_principale[0].immagine.url;
+	
+	if (paragrafo){
+		immagineSostitutiva = paragrafo.primary.immagine.url;
+	}
 	
 	let categoria = content.data.categoria.slug;
 	let dataUltimaPubblicazione = content.last_publication_date;
