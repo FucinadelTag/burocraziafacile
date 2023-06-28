@@ -16,8 +16,17 @@ module.exports = {
     loading: { color: '#3B8070' },
     modules: [
         '@nuxtjs/style-resources',
-        'cookie-universal-nuxt'
+        'cookie-universal-nuxt',
+        '@nuxtjs/google-gtag',
     ],
+    'google-gtag':{
+        id: 'UA-19846103-41', // required
+        config:{
+            send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+        },
+        debug: true, // enable to track in dev mode
+        
+    },
     styleResources: {
         scss: [
             './assets/scss/variables.scss',
@@ -37,7 +46,7 @@ module.exports = {
         'redirect-ssl',
     ],
     plugins: [
-        { src: '~plugins/analitycs.js', ssr: false },
+        // { src: '~plugins/analitycs.js', ssr: false },
         { src: '~plugins/facebook.js', ssr: false },
         { src: '~plugins/vue-cookie-law.js', ssr: false },
         { src: '~plugins/iubenda.js', ssr: false },

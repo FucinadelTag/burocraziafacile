@@ -2,8 +2,8 @@
   "name": "burocraziafacile",
   "version": "1.0.0",
   "engines": {
-      "node": "14.x"
-    },
+    "node": "14.x"
+  },
   "description": "Nuxt.js project",
   "author": "Lorenzo Caldara <lorenzo@dinoweb.net>",
   "private": true,
@@ -17,6 +17,7 @@
   "dependencies": {
     "@nuxtjs/bulma": "^1.2.3",
     "@nuxtjs/google-analytics": "^2.2.0",
+    "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/style-resources": "^0.1.2",
     "babel-cli": "^6.26.0",
     "babel-preset-node6": "^11.0.0",
